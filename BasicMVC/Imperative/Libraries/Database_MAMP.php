@@ -8,7 +8,7 @@ $db_socket = '/Applications/MAMP/tmp/mysql/mysql.sock';
 
 
 try {
-  $conn = new PDO("mysql:unix_socket=$db_socket;port=$port;dbname=$db_db", $db_user, $db_password);
+  $conn = new PDO("mysql:unix_socket=$db_socket;port=$db_port;dbname=$db_db", $db_user, $db_password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e) {
