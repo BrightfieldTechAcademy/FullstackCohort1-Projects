@@ -1,5 +1,6 @@
 <?php
-$db_host = 'localhost';
+function dbConnection(){
+  $db_host = 'localhost';
 $db_user = 'root';
 $db_password = 'oli@MEN2018';
 $db_db = 'mydb';
@@ -11,5 +12,6 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
+}
 }
 ?>
