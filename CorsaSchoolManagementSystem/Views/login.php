@@ -55,17 +55,15 @@
 
         </style>
     </head>
-    <body>
-        <div>  
-           <nav class="navbar navbar-light py-2 mb-5">
-                <div class="">
-                    <a class="navbar-brand" href="#">
-                        <img class="ms-2 rounded-circle" src="/FullstackCohort1-Projects/CorsaSchoolManagementSystem/Views/image/logo.jpeg" alt="" width="50" height="40"> 
-                        <span class="text-white fs-3">Corsa and Partners Boarding School Complex</span>
-                    </a>
-                </div>
-            </nav>
-        </div>
+    <body>  
+        <nav class="navbar py-2 mb-5">
+            <div class="">
+                <a class="navbar-brand" href="#">
+                    <img class="ms-2 rounded-circle" src="/FullstackCohort1-Projects/CorsaSchoolManagementSystem/Views/image/logo.jpeg" alt="" width="50" height="40"> 
+                    <span class="text-white fs-5">Corsa and Partners Boarding School Complex</span>
+                </a>
+            </div>
+        </nav>
         <div class="d-flex flex-column justify-content-md-center align-items-center vh-100">
             <div class="container admin">
                 <h3 class="text-center">Administrator Login</h3>
