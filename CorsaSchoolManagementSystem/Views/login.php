@@ -41,7 +41,7 @@
             }
 
             .form-box .admin-icon i {
-                font-size: 2rem;
+                font-size: 2.8rem;
                 color: white;
             }
 
@@ -52,6 +52,7 @@
                 width: 400px;
                 box-shadow: 0px 10px 20px 15px rgba(0, 0, 0, 0.2);
             }
+
         </style>
     </head>
     <body>
@@ -65,33 +66,35 @@
                 </div>
             </nav>
         </div>
-          <div class="container admin">
-              <h3 class="text-center">Administrator Login</h3>
-          </div>
-        <div class="container form-box">
-           <div class="admin-icon">
-              <i class="bi bi-person-circle"></i>
+        <div class="d-flex flex-column justify-content-md-center align-items-center vh-100">
+            <div class="container admin">
+                <h3 class="text-center">Administrator Login</h3>
             </div>
-            <form>
-                <div class="mb-3 e-mail">
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+            <div class="container form-box">
+            <div class="admin-icon">
+                <i class="bi bi-person-circle"></i>
                 </div>
-                <div class="mb-3 pass-word">
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="d-flex justify-content-between">
-                   <div>
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Remind Me</label>
-                   </div>
-                   <div>
-                      <a href="#">Forgot password?</a>
-                   </div>
-                </div>
+                <form>
+                    <div class="mb-3 e-mail">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="mb-3 pass-word">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="d-flex justify-content-between">
+                    <div>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remind Me</label>
+                    </div>
+                    <div>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    </div>
 
-                <input type="submit" class="form-control btn btn-primary mt-4 p-2" value="LOGIN"> 
-            </form>
-        </div>
+                    <input type="submit" class="form-control btn btn-primary mt-4 p-2" value="LOGIN"> 
+                </form>
+            </div>
+         </div>
 
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
