@@ -11,18 +11,15 @@
                 font-family: 'Outfit', sans-serif;
             }
            nav {
-            width: 95%;
-            position: fixed !important;
-            top: 1rem;
-            left: 1.5rem;
-            border-radius: 2rem;
             box-shadow: 0px 10px 15px 15px rgba(0, 0, 0, 0.2);
            }
 
+           .admin{
+                width: 400px;
+                box-shadow: 0px 10px 20px 15px rgba(0, 0, 0, 0.2);
+            }
+
             .form-box{
-                margin-top: 2rem !important;
-                border-radius: 2rem;
-                padding: 1rem 1.5rem;
                 width: 500px;
                 box-shadow: 0px 10px 20px 15px rgba(0, 0, 0, 0.2);
             }
@@ -34,43 +31,22 @@
             .form-box .pass-word input{
                 height: 3.3rem;
             }
-
-            .form-box .admin-icon {
-                text-align: center;
-               
-            }
-
-            .form-box .admin-icon i {
-                font-size: 2.8rem;
-                color: white;
-            }
-
-            .admin{
-                margin-top: 7rem !important;
-                border-radius: 2rem;
-                padding: 1rem 0;
-                width: 400px;
-                box-shadow: 0px 10px 20px 15px rgba(0, 0, 0, 0.2);
-            }
-
         </style>
     </head>
     <body>  
-        <nav class="navbar py-2 mb-5">
-            <div class="">
+        <nav class="navbar py-2 mb-5 fixed-top rounded-bottom">
                 <a class="navbar-brand" href="#">
                     <img class="ms-2 rounded-circle" src="/FullstackCohort1-Projects/CorsaSchoolManagementSystem/Views/image/logo.jpeg" alt="" width="50" height="40"> 
                     <span class="text-white fs-5">Corsa and Partners Boarding School Complex</span>
                 </a>
-            </div>
         </nav>
         <div class="d-flex flex-column justify-content-md-center align-items-center vh-100">
-            <div class="container admin">
+            <div class="container admin mt-5 mb-2 rounded-pill py-2">
                 <h3 class="text-center">Administrator Login</h3>
             </div>
-            <div class="container form-box">
-            <div class="admin-icon">
-                <i class="bi bi-person-circle"></i>
+            <div class="container form-box rounded mt-3 py-2 px-3">
+                <div class="admin-icon text-center">
+                  <i class="bi bi-person-circle fs-1"></i>
                 </div>
                 <form>
                     <div class="mb-3 e-mail">
