@@ -1,12 +1,3 @@
-<?php
-// for xampp
-define("BASE_URL", 'http://'. $_SERVER['HTTP_HOST']. "/FullstackCohort1-Projects\CorsaSchoolManagementSystem");
-
-//for php server
-//define("BASE_URL", 'http://'. $_SERVER['HTTP_HOST']);
-?>
-
-
 <!Doctype html>
 <html>
     <head>

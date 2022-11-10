@@ -1,11 +1,11 @@
 <?php 
-
+include_once('Config/Config.php');
 class Database 
 {
-    private $host = 'localhost';
-    private $name = 'csms';
-    private $user = 'root';
-    private $password = 'oli@MEN2018';
+    private $host = DB_HOST;
+    private $name = DB_NAME;
+    private $user = DB_USER;
+    private $password = DB_PASSWORD;
 
     private $dbCon;
     private $stmt;
