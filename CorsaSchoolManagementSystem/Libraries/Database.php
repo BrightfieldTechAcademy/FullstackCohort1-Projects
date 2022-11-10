@@ -29,31 +29,28 @@ class Database
         }
     }
 
-    public function bind($param, $value, $type = null)
-    {
+    public function bind($param, $value, $type = null){
         try {
-            if(is_null($type)){
-                switch ($type) {
-                    case is_int($type):
-                        $type = PDO::PARAM_INT;
-                        break;
-                    case is_bool($type):
-                        $type = PDO::PARAM_BOOL;
-                        break;
-                    case is_null($type):
-                        $type = PDO::PARAM_NULL;
-                        break;
+                if(is_null($type)){
+                  switch(true){
+                    case is_int($value):
+                      $type = PDO::PARAM_INT;
+                      break;
+                    case is_bool($value):
+                      $type = PDO::PARAM_BOOL;
+                      break;
+                    case is_null($value):
+                      $type = PDO::PARAM_NULL;
+                      break;
                     default:
-                        $type = PDO::PARAM_STR;
-                        break;
+                      $type = PDO::PARAM_STR;
+                  }
                 }
-
-            }
-            $this->stmt->bindValue($param, $value, $type);
-        } catch (PDOException $e) {
-            echo "Bind failed: " . $e->getMessage();
+          $this->stmt->bindValue($param, $value, $type);
+        } catch (Throwable $e) {
+                echo  "Binding error: ". $e->getMessage(); 
         }
-    }
+      }
 
     public function execute()
     {
