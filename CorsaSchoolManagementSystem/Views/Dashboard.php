@@ -22,7 +22,7 @@
             <!-- Sidebar-->
             <div class="border-end side-nav" id="sidebar-wrapper">
                 <div class="sidebar-heading border-bottom">
-                    <img src="../logo.jpg" alt="" style="width: 80px; height: 70px;">
+                    <img src="<?php echo BASE_URL?>/Views/image/logo.jpg" alt="" style="width: 80px; height: 70px;">
                 </div>
                 <div class="list-group list-group-flush">
                     <a class="list-group-item list-group-item-action p-3" href="#!" style="font-size: 6rem !important; color: darkmagenta">
