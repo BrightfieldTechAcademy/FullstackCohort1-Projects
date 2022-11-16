@@ -36,7 +36,7 @@
     <body>  
         <nav class="navbar py-2 mb-5 fixed-top rounded-bottom">
                 <a class="navbar-brand" href="#">
-                    <img class="ms-2 rounded-circle" src="<?php echo BASE_URL ?>/Views/image/logo.jpeg" alt="" width="50" height="40"> 
+                    <img class="ms-2 rounded-circle" src="<?php echo BASE_URL ?>/Views/image/logo.jpg" alt="" width="50" height="40"> 
                     <span class="text-white fs-5">Corsa and Partners Boarding School Complex</span>
                 </a>
         </nav>

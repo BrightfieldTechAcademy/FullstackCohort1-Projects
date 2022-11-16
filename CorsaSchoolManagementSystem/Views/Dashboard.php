@@ -80,23 +80,13 @@
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
-                                <li class="nav-item py-4 px-5 text-white">
-                                    <span class="material-symbols-outlined px-3"  style="font-size: 5rem !important;">
-                                        volunteer_activism
-                                    </span>
-                                    <span class="material-symbols-outlined" style="font-size: 5rem !important;">
-                                        bring_your_own_ip
-                                    </span>
-                                </li>
                                 <li class="nav-item active py-4 px-5">
-                                    <button class="btn btn-sm text-white py-3 px-5 fs-4" style="background-color: darkmagenta; border-radius: 2rem; border: 1px solid white;">
+                                    <a href="/logout.php" type="button"  class="btn btn-sm text-white py-3 px-5 fs-4" style="background-color: darkmagenta; border-radius: 2rem; border: 1px solid white;">
                                         <span class="material-symbols-outlined me-2 fs-5">
-                                            diversity_3
-                                            </span>Current Students
-                                    </button>
+                                           logout
+                                            </span>Log out
+                                    </a>
                                 </li>
-                                
-                                
                             </ul>
                         </div>
                     </div>
