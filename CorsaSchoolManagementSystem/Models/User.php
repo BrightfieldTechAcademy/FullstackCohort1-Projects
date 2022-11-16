@@ -9,4 +9,11 @@ class User{
     {
      $this->db = $db;   
     }
+
+    public function logIn(string $email)
+    {
+        $this->db->query("SELECT * from Users where email = :email");
+        $this->db->bind(":email", $email);
+        return $this->db->single();
+    }
 }

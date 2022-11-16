@@ -1,12 +1,3 @@
-<?php
-// for xampp
-define("BASE_URL", 'http://'. $_SERVER['HTTP_HOST']. "/FullstackCohort1-Projects\CorsaSchoolManagementSystem");
-
-//for php server
-//define("BASE_URL", 'http://'. $_SERVER['HTTP_HOST']);
-?>
-
-
 <!Doctype html>
 <html>
     <head>
@@ -57,12 +48,12 @@ define("BASE_URL", 'http://'. $_SERVER['HTTP_HOST']. "/FullstackCohort1-Projects
                 <div class="admin-icon text-center">
                   <i class="bi bi-person-circle fs-1"></i>
                 </div>
-                <form>
+                <form method="POST" action="/index.php">
                     <div class="mb-3 e-mail">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" name="email" required>
                     </div>
                     <div class="mb-3 pass-word">
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" required>
                     </div>
                     <div class="d-flex justify-content-between">
                     <div>
@@ -74,7 +65,7 @@ define("BASE_URL", 'http://'. $_SERVER['HTTP_HOST']. "/FullstackCohort1-Projects
                     </div>
                     </div>
 
-                    <input type="submit" class="form-control btn btn-primary mt-4 p-2" value="LOGIN"> 
+                    <input type="submit" class="form-control btn btn-primary mt-4 p-2" value="LOGIN" name="LoginAction"> 
                 </form>
             </div>
          </div>
