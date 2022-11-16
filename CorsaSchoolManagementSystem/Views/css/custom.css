@@ -1,0 +1,80 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+
+
+
+.side-nav {
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);
+    padding: 0 0.5rem;
+    min-height: 100vh;
+}
+
+.list-group {
+   height: 80vh;
+}
+.list-group a{
+    margin: 2rem 0rem;
+    padding: 1.5rem 1rem !important;
+    font-size: 2rem !important;
+}
+
+.list-group a:hover {
+    background-color: blue;
+    color: white;
+}
+
+
+.student-info {
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 19px 0 rgba(0, 0, 0, 0.15);
+    padding: 2rem 2rem;
+    margin-top: 12rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+.student-info .row-1 {
+    margin-bottom: 2rem;
+}
+
+.student-info .card {
+    box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+    background-color: darkmagenta;
+    color: white;
+}
+
+.search {
+    margin-top: 5rem !important; 
+    box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); padding: 3rem 2rem;"
+}
+
+
+
+.statistics {
+    width: 80vw !important;
+}
+
+.statistics .row .col .card {
+    box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+footer {
+    margin-top: 2rem;
+    height: 10rem;
+    box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 0.5rem 1rem;
+    background-color: darkmagenta;
+    color: white;
+}
+
