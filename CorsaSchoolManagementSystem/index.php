@@ -1,7 +1,6 @@
 <?php 
 
-include("Models/User.php");
-include("Libraries/Template.php");
+require('Core/init.php');
 
 $user = new User(new Database());
 session_start();
@@ -19,6 +18,7 @@ if($_SESSION['loggedIn']){
             if($data){
                 if(password_verify($password, $data->password)){
                     $_SESSION['loggedIn'] = true;
+                    $_SESSION['userType'] = UserType::ADMIN;
                     header('Location: /dashboard.php');
                 }else{
                     die("The <b>Password</b> provided does not exist");

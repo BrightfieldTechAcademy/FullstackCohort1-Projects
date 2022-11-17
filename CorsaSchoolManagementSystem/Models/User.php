@@ -1,6 +1,6 @@
 <?php 
 
-include("Libraries/Database.php");
+require("Core/init.php");
 
 class User{
     private Database $db;
