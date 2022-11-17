@@ -1,7 +1,7 @@
 <?php 
-include("Libraries/Template.php");
-include_once('Config/Config.php');
-session_start();
+
+require('Core/init.php');
+
 if($_SESSION['loggedIn']){
     $template = new Template("Views/dashboard.php");
     echo $template;
