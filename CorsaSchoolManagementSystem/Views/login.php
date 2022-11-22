@@ -3,7 +3,7 @@
     <head>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,400;0,500;0,800;1,400;1,500&display=swap" rel="stylesheet">
 
-         <link rel="stylesheet" href="https://bootswatch.com/5/quartz/bootstrap.min.css">
+         <link rel="stylesheet" href="https://bootswatch.com/5/cosmo/bootstrap.min.css">
          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
          <title>Admin Login Page</title>
         <style>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corsa And Partners Boarding School Complex</title>
-    <link rel="icon" href="logo.jpg">
+    <link rel="icon" href="<?php echo BASE_URL?>/Views/image/logo.jpg">
     <link rel="stylesheet" href="https://bootswatch.com/5/cosmo/bootstrap.min.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -16,7 +16,7 @@
   <nav class="navbar navbar-light bg-primary fixed-top" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
     <div class="container-fluid">
       <a class="navbar-brand m-auto" href="#">
-        <img src=" <?php echo BASE_URL?>/Views/images/logo.jpg" class="thumbmail img-fluid" alt="" style="width: 80px; height: 60px;">  
+        <img src="<?php echo BASE_URL?>/Views/image/logo.jpg" class="thumbmail img-fluid" alt="" style="width: 80px; height: 60px;">  
       </a>
     </div>
   </nav>
@@ -24,9 +24,9 @@
     <h5 class="fw-bolder"> STUDENT PERSONAL INFORMATION</h5>
   </div> 
   
-  <form action="" method="post" class="py-2 px-3 rounded container my-5" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
+  <form action="/addStudent.php" method="post" class="py-2 px-3 rounded container my-5" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
       <div class="container rounded m-auto" style="width: 13rem; height: 10rem; box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
-        <input type="file" name="fileToUpload" id="fileToUpload" class="mt-3">
+        <input type="file" name="fileToUpload" id="fileToUpload" class="mt-3" required>
       </div>
       <div class="accordion container rounded py-2 px-3" id="accordionExample">
         <div class="accordion-item my-4 border border-dark">
@@ -39,12 +39,12 @@
             <div class="accordion-body text-primary">
                     <div class="d-flex flex-column container mt-4">
                         <label for="firstName" class="my-2">First name</label>
-                        <input type="text" class="form-control" id="fname" name="firstName">
+                        <input type="text" class="form-control" id="fname" name="firstName" required>
                     </div>
 
                     <div class="d-flex flex-column container mt-4">
                         <label for="lastName" class="my-2">Last name:</label>
-                        <input type="text" class="form-control" id="fname" name="lastName">
+                        <input type="text" class="form-control" id="fname" name="lastName" required>
                     </div>
 
                     <div class="d-flex flex-column container mt-4">
@@ -54,17 +54,17 @@
                     
                     <div class="d-flex flex-column container mt-4">
                         <label for="DOB" class="my-2">Date Of Birth:</label>
-                        <input type="date" class="form-control" id="fname" name="dateOfBirth">
+                        <input type="date" class="form-control" id="fname" name="dateOfBirth" required>
                     </div>
                     
                     <div class="d-flex flex-column container mt-4">
                         <label for="POB" class="my-2">Place Of Birth:</label>
-                        <input type="text" class="form-control" id="fname" name="placeOfBirth">
+                        <input type="text" class="form-control" id="fname" name="placeOfBirth" required>
                     </div>
                     
                     <div class="d-flex flex-column container mt-4">
                         <label for="home-town" class="my-2">Hometown:</label>
-                        <input type="text" class="form-control" id="fname" name="hometown">
+                        <input type="text" class="form-control" id="fname" name="hometown" required>
                     </div>
                     
                     <div class="d-flex flex-column container mt-4">
@@ -130,42 +130,42 @@
             <div class="accordion-body">
                   <div class="d-flex flex-column container">
                     <label class="my-2">Father's name:</label>
-                    <input type="text" class="form-control" name="father'sName">
+                    <input type="text" class="form-control" name="fathersName" required>
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
                     <label class="my-2">Occupation</label>
-                    <input type="text" class="form-control" name="occupation">
+                    <input type="text" class="form-control" name="occupation" required>
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
                     <label class="my-2">Telephone</label>
-                    <input type="tel" class="form-control" name="telephone">
+                    <input type="tel" class="form-control" name="telephone" required>
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
                     <label class="my-2">Hometown</label>
-                    <input type="text" class="form-control" name="hometown">
+                    <input type="text" class="form-control" name="hometown" required>
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
                     <label class="my-2">Occupation</label>
-                    <input type="text" class="form-control" name="occupation">
+                    <input type="text" class="form-control" name="occupation" required>
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
                     <label class="my-2">Mother's name</label>
-                    <input type="text" class="form-control" name="mother'sName">
+                    <input type="text" class="form-control" name="mothersName" required>
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
                     <label class="my-2">Occupation</label>
-                    <input type="text" class="form-control" name="occupation">
+                    <input type="text" class="form-control" name="occupation" required>
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
                     <label class="my-2">Hometown</label>
-                    <input type="text" class="form-control" name="hometown">
+                    <input type="text" class="form-control" name="hometown" required>
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
