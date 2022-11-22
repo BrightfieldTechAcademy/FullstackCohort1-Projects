@@ -1,5 +1,4 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,8 +8,11 @@ body {
     font-family: 'Outfit', sans-serif;
 }
 
-
-
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
 
 .side-nav {
     justify-content: center;
@@ -21,9 +23,10 @@ body {
 }
 
 .list-group {
-   height: 80vh;
+    height: 80vh;
 }
-.list-group a{
+
+.list-group a {
     margin: 2rem 0rem;
     padding: 1.5rem 1rem !important;
     font-size: 2rem !important;
@@ -34,7 +37,6 @@ body {
     color: white;
 }
 
-
 .student-info {
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 19px 0 rgba(0, 0, 0, 0.15);
     padding: 2rem 2rem;
@@ -43,23 +45,23 @@ body {
     margin-right: 1rem;
 }
 
-
 .student-info .row-1 {
     margin-bottom: 2rem;
 }
 
 .student-info .card {
     box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
-    background-color: darkmagenta;
+    background-color: blue;
     color: white;
 }
 
 .search {
-    margin-top: 5rem !important; 
-    box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); padding: 3rem 2rem;"
+    margin-top: 5rem !important;
+    box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 3rem 2rem;
+    "
+
 }
-
-
 
 .statistics {
     width: 80vw !important;
@@ -74,7 +76,6 @@ footer {
     height: 10rem;
     box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 0.5rem 1rem;
-    background-color: darkmagenta;
+    background-color: blue;
     color: white;
 }
-

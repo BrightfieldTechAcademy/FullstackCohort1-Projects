@@ -4,16 +4,14 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />   
         <title>User Dashboard</title>
-        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap.min.css.css">
+        <link rel="stylesheet" href="https://bootswatch.com/5/cosmo/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,200;1,400;1,500;1,600;1,900&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo BASE_URL?>/Views/css/custom.css">
-        <link rel="stylesheet" href="<?php echo BASE_URL?>/Views/css/style.css">
+        <link rel="stylesheet" href="<?php echo BASE_URL?>/Views/css/sidebar.css">
     </head>
     <body>
         <div class="d-flex" id="wrapper">
@@ -71,7 +69,7 @@
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
                 <!-- Top navigation-->
-                <nav class="navbar navbar-expand-lg navbar-light border-bottom" style="background-color: darkmagenta; position: fixed; width: 100%; z-index: 99;">
+                <nav class="navbar navbar-expand-lg  navbar-dark bg-primary">
                     <div class="container-fluid">
                         <button class="btn btn-primary" id="sidebarToggle">
                             <i class="bi bi-list fs-1 py-2 px-2"  id="bi-list"></i>
@@ -81,9 +79,9 @@
                             <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
                                 <li class="nav-item active py-4 px-5">
                                     <a href="/logout.php" type="button"  class="btn btn-sm text-white py-3 px-5 fs-4" style="background-color: darkmagenta; border-radius: 2rem; border: 1px solid white;">
-                                        <span class="material-symbols-outlined me-2 fs-5">
-                                           logout
-                                            </span>Log out
+                                        <span class="material-icons">
+                                        logout
+                                        </span>Log out
                                     </a>
                                 </li>
                             </ul>

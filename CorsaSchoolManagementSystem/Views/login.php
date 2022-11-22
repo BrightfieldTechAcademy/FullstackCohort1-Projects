@@ -1,10 +1,9 @@
 <!Doctype html>
 <html>
     <head>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,400;0,500;0,800;1,400;1,500&display=swap" rel="stylesheet">
-
+         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,400;0,500;0,800;1,400;1,500&display=swap" rel="stylesheet">
          <link rel="stylesheet" href="https://bootswatch.com/5/cosmo/bootstrap.min.css">
-         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
          <title>Admin Login Page</title>
         <style>
             body {
@@ -31,6 +30,7 @@
             .form-box .pass-word input{
                 height: 3.3rem;
             }
+            .material-icons.md-48 { font-size: 48px; }
         </style>
     </head>
     <body>  
@@ -46,7 +46,9 @@
             </div>
             <div class="container form-box rounded mt-3 py-2 px-3">
                 <div class="admin-icon text-center">
-                  <i class="bi bi-person-circle fs-1"></i>
+                <span class="material-icons md-48">
+                    account_circle
+                </span>
                 </div>
                 <form method="POST" action="/index.php">
                     <div class="mb-3 e-mail">
