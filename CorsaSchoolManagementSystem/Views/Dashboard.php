@@ -12,6 +12,8 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo BASE_URL?>/Views/css/custom.css">
         <link rel="stylesheet" href="<?php echo BASE_URL?>/Views/css/sidebar.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
     </head>
     <body>
         <div class="d-flex" id="wrapper">
@@ -23,43 +25,46 @@
                 </div>
                 <div class="list-group list-group-flush">
                     <a class="list-group-item list-group-item-action p-3" href="#!" style="font-size: 6rem !important; color: darkmagenta">
-                        <i class="bi bi-person-circle"></i>
+                    <span class="material-icons me-2 fs-1">
+                    account_circle
+                    </span>
                     </a>
                     <a class="list-group-item list-group-item-action p-3" href="#!">
-                        <i class="bi bi-house-fill me-2 fs-3"></i>Dashboard
-                    </a>
+                    <span class="material-icons me-2 fs-2">
+                        diversity_2
+                    </span>dashboard
                     <a class="list-group-item list-group-item-action p-3" href="#!">
-                        <span class="material-symbols-outlined me-2 fs-3">
+                        <span class="material-icons me-2 fs-3">
                             diversity_3
                             </span> Students
                     </a>
                     <a class="list-group-item list-group-item-action p-3" href="#!">
-                        <span class="material-symbols-outlined fs-3 me-2">
+                        <span class="material-icons fs-3 me-2">
                             diversity_1
                         </span> Teachers
                     </a>
                     <a class="list-group-item list-group-item-action p-3" href="#!">
-                        <span class="material-symbols-outlined fs-3 me-2">
+                        <span class="material-icons fs-3 me-2">
                             admin_panel_settings
                             </span> Admin
                     </a>
                     <a class="list-group-item list-group-item-action p-3" href="#!">
-                        <span class="material-symbols-outlined fs-3 me-2">
+                        <span class="material-icons fs-3 me-2">
                             airline_seat_individual_suite
                             </span> Class 
                     </a>
                     <a class="list-group-item list-group-item-action p-3" href="#!">
-                            <span class="material-symbols-outlined fs-3 me-2">
+                            <span class="material-icons fs-3 me-2">
                                 subject
                                 </span> Subjects
                     </a>
                     <a class="list-group-item list-group-item-action  p-3" href="#!">
-                            <span class="material-symbols-outlined fs-3 me-2">
+                            <span class="material-icons fs-3 me-2">
                                 account_tree
                                 </span> Generate Invoices
                     </a>
                     <a class="list-group-item list-group-item-action p-3" href="#!">
-                        <span class="material-symbols-outlined fs-3 me-2 fs-2">
+                        <span class="material-icons fs-3 me-2 fs-2">
                             group
                             </span> Users
                     </a>
@@ -72,14 +77,15 @@
                 <nav class="navbar navbar-expand-lg  navbar-dark bg-primary">
                     <div class="container-fluid">
                         <button class="btn btn-primary" id="sidebarToggle">
-                            <i class="bi bi-list fs-1 py-2 px-2"  id="bi-list"></i>
-                        </button>
+                        <span class="material-icons fs-2">
+                        density_small
+                        </span>                        </button>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
                                 <li class="nav-item active py-4 px-5">
-                                    <a href="/logout.php" type="button"  class="btn btn-sm text-white py-3 px-5 fs-4" style="background-color: darkmagenta; border-radius: 2rem; border: 1px solid white;">
-                                        <span class="material-icons">
+                                    <a href="/logout.php" type="button"  class="btn btn-sm text-white py-3 px-5 fs-4" style="background-color: blue; border-radius: 2rem; border: 1px solid white;">
+                                        <span class="material-icons ">
                                         logout
                                         </span>Log out
                                     </a>
