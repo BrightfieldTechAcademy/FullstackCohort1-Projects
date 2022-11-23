@@ -15,6 +15,7 @@
 <body>
   <nav class="navbar navbar-light bg-primary fixed-top" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
     <div class="container-fluid">
+    <i class="bi bi-skip-backward-fill"></i>
       <a class="navbar-brand m-auto" href="#">
         <img src="<?php echo BASE_URL?>/Views/image/logo.jpg" class="thumbmail img-fluid" alt="" style="width: 80px; height: 60px;">  
       </a>
@@ -129,7 +130,7 @@
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
                   <div class="d-flex flex-column container">
-                    <label class="my-2">Father's name:</label>
+                    <label class="my-2">Father name:</label>
                     <input type="text" class="form-control" name="fathersName" required>
                   </div>
 
@@ -149,11 +150,6 @@
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
-                    <label class="my-2">Occupation</label>
-                    <input type="text" class="form-control" name="occupation" required>
-                  </div>
-
-                  <div class="d-flex flex-column container mt-4">
                     <label class="my-2">Mother's name</label>
                     <input type="text" class="form-control" name="mothersName" required>
                   </div>
@@ -169,13 +165,13 @@
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
-                    <label class="my-2">HS No.</label>
+                    <label class="my-2">House Number</label>
                     <input type="text" class="form-control" name="houseNumber">
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
                     <label class="my-2">Telephone</label>
-                    <input type="tel" class="form-control" name="telephone">
+                    <input type="tel" class="form-control" name="telephone" required>
                   </div>
 
                   <h4 class="mt-4 ms-3">Guardian's Details (If different from parents)</h4>
