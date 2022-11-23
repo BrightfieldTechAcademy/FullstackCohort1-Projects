@@ -9,3 +9,4 @@ CREATE TABLE Users (
     CONSTRAINT UC_User UNIQUE (email),
     PRIMARY KEY (id)
 );
+
