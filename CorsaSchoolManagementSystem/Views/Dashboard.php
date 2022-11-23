@@ -22,46 +22,23 @@
                     <img src="<?php echo BASE_URL?>/Views/image/logo.jpg" alt="" style="width: 80px; height: 70px;">
                 </div>
                 <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action p-3" href="#!" style="font-size: 6rem !important; color: darkmagenta">
-                        <i class="bi bi-person-circle"></i>
+                    <a class="list-group-item list-group-item-action p-3" href="#!">
+                        <span class="material-icons">dashboard</span>Dashboard
                     </a>
                     <a class="list-group-item list-group-item-action p-3" href="#!">
-                        <i class="bi bi-house-fill me-2 fs-3"></i>Dashboard
+                        <span class="material-icons">person</span>Students
                     </a>
                     <a class="list-group-item list-group-item-action p-3" href="#!">
-                        <span class="material-symbols-outlined me-2 fs-3">
-                            diversity_3
-                            </span> Students
+                        <span class="material-icons">person</span>Teachers
                     </a>
                     <a class="list-group-item list-group-item-action p-3" href="#!">
-                        <span class="material-symbols-outlined fs-3 me-2">
-                            diversity_1
-                        </span> Teachers
+                        <span class="material-icons">admin_panel_settings</span> Admin
                     </a>
                     <a class="list-group-item list-group-item-action p-3" href="#!">
-                        <span class="material-symbols-outlined fs-3 me-2">
-                            admin_panel_settings
-                            </span> Admin
+                        <span class="material-icons">class</span>  Class 
                     </a>
                     <a class="list-group-item list-group-item-action p-3" href="#!">
-                        <span class="material-symbols-outlined fs-3 me-2">
-                            airline_seat_individual_suite
-                            </span> Class 
-                    </a>
-                    <a class="list-group-item list-group-item-action p-3" href="#!">
-                            <span class="material-symbols-outlined fs-3 me-2">
-                                subject
-                                </span> Subjects
-                    </a>
-                    <a class="list-group-item list-group-item-action  p-3" href="#!">
-                            <span class="material-symbols-outlined fs-3 me-2">
-                                account_tree
-                                </span> Generate Invoices
-                    </a>
-                    <a class="list-group-item list-group-item-action p-3" href="#!">
-                        <span class="material-symbols-outlined fs-3 me-2 fs-2">
-                            group
-                            </span> Users
+                        <span class="material-icons">subject</span>Subjects
                     </a>
                 </div>
             </div>
@@ -72,13 +49,15 @@
                 <nav class="navbar navbar-expand-lg  navbar-dark bg-primary">
                     <div class="container-fluid">
                         <button class="btn btn-primary" id="sidebarToggle">
-                            <i class="bi bi-list fs-1 py-2 px-2"  id="bi-list"></i>
+                        <span class="material-icons">
+                            menu
+                        </span>
                         </button>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
                                 <li class="nav-item active py-4 px-5">
-                                    <a href="/logout.php" type="button"  class="btn btn-sm text-white py-3 px-5 fs-4" style="background-color: darkmagenta; border-radius: 2rem; border: 1px solid white;">
+                                    <a href="/logout.php" type="button"  class="btn btn-sm text-white py-3 px-5 fs-4 logout">
                                         <span class="material-icons">
                                         logout
                                         </span>Log out
@@ -292,7 +271,7 @@
                             <div class="col">
                                 <div class="m-2 fs-1">
                                     <span>Develop with</span>
-                                    <span class="material-symbols-outlined fs-1">
+                                    <span class="material-icons">
                                         volunteer_activism
                                     </span>
                                     <span>By .......</span>
