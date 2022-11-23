@@ -33,14 +33,13 @@ body {
 }
 
 .list-group a:hover {
-    background-color: blue;
+    background-color: #2780e3;
     color: white;
 }
 
 .student-info {
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 19px 0 rgba(0, 0, 0, 0.15);
     padding: 2rem 2rem;
-    margin-top: 12rem;
     margin-left: 1rem;
     margin-right: 1rem;
 }
@@ -51,7 +50,7 @@ body {
 
 .student-info .card {
     box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
-    background-color: blue;
+    background-color: #2780e3;
     color: white;
 }
 
@@ -59,7 +58,11 @@ body {
     margin-top: 5rem !important;
     box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 3rem 2rem;
+}
 
+.logout {
+    border-radius: 2rem;
+    border: 1px solid white;
 }
 
 .statistics {
@@ -75,6 +78,6 @@ footer {
     height: 10rem;
     box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 0.5rem 1rem;
-    background-color: blue;
+    background-color: #2780e3;
     color: white;
 }
