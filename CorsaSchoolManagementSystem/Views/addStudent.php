@@ -236,7 +236,7 @@
         </div>
       </div> 
       <div class="container">
-        <input type="submit" value="Submit" class="form-control btn btn-primary my-2 btn-sm text-white py-2 px-3 fs-4" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
+        <input type="submit" value="Submit" class="form-control btn btn-primary my-2 btn-sm text-white py-2 px-3 fs-4" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);" name="addStudent">
       </div>
   </form> 
     

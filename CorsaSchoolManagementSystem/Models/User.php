@@ -3,7 +3,7 @@
 require("Core/init.php");
 
 class User{
-    private Database $db;
+    protected Database $db;
 
     public function __construct(Database $db)
     {
