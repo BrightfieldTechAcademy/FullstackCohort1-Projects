@@ -15,9 +15,9 @@
 <body>
   <nav class="navbar navbar-light bg-primary fixed-top" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
     <div class="container-fluid">
-      <a href="/dashboard.php" class="btn btn-light btn-sm py-1 px-3 me-auto">
-        <span class="material-icons fs-4 text-primary">
-          fast_rewind
+      <a href="/dashboard.php" class="btn btn-primary py-2 px-3 me-auto">
+        <span class="material-icons">
+            arrow_back
         </span> 
       </a>
       <a class="navbar-brand m-auto" href="#">

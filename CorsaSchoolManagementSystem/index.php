@@ -7,7 +7,7 @@ session_start();
 if($_SESSION['loggedIn']){
     header('Location: /dashboard.php');
 }else{
-    if($_POST['login']){
+    if($_POST['loginAction']){
         $email = $_POST['email'];
         $password = htmlspecialchars($_POST['password']);
         // Remove all illegal characters from email

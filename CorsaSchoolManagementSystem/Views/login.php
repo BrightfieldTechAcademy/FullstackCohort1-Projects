@@ -67,7 +67,7 @@
                     </div>
                     </div>
 
-                    <input type="submit" class="form-control btn btn-primary mt-4 p-2" value="LOGIN" name="LoginAction"> 
+                    <input type="submit" class="form-control btn btn-primary mt-4 p-2" value="LOGIN" name="loginAction"> 
                 </form>
             </div>
          </div>
