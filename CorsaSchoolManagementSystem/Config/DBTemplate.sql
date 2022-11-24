@@ -51,7 +51,7 @@ CREATE TABLE ParentsInformation (
     fathersTelephone  varchar(255) NOT NULL,
     fathersHometown  varchar(255) NOT NULL,
     mothersName  varchar(255) NOT NULL,
-    mathersOccupation varchar(255) NOT NULL,
+    mothersOccupation varchar(255) NOT NULL,
     mothersHometown  varchar(255) NOT NULL,
     house  varchar(255),
     mothersTelephone  varchar(255) NOT NULL,
