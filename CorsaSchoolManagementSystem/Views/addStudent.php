@@ -15,7 +15,9 @@
 <body>
   <nav class="navbar navbar-light bg-primary fixed-top" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
     <div class="container-fluid">
-    <i class="bi bi-skip-backward-fill"></i>
+      <a href="/Dashbard.php" class="btn btn-light btn-sm py-1 px-3 me-auto">
+       <i class="bi bi-skip-backward-fill fs-4 text-primary"></i>  
+      </a>
       <a class="navbar-brand m-auto" href="#">
         <img src="<?php echo BASE_URL?>/Views/image/logo.jpg" class="thumbmail img-fluid" alt="" style="width: 80px; height: 60px;">  
       </a>
@@ -81,13 +83,13 @@
                     <div class="container mt-4">
                         <p class="mt-3 fw-bolder">Gender</p>
                          <div class="d-flex">
-                            <input type="checkbox" class="ps-2" name="male">
+                            <input type="radio" class="ps-2" name="gender">
                             <label for="male" class="p-2">Male</label>
                             
-                            <input type="checkbox" class="ps-2" name="female">
+                            <input type="radio" class="ps-2" name="gender">
                             <label for="female" class="p-2">Female</label>
                             
-                            <input type="checkbox" class="ps-2" name="other">
+                            <input type="radio" class="ps-2" name="gender">
                             <label for="other" class="p-2">Other</label>
                             
                          </div>
@@ -115,7 +117,7 @@
 
                     <div class="d-flex flex-column container mt-4">
                         <label for="GPS" class="my-2">Year Of Admission</label>
-                        <input type="datetime-local" class="form-control" name="yearOfAdmission">
+                        <input type="number" min="2000" max="3000" class="form-control" name="yearOfAdmission">
                     </div>
             </div>
           </div>
@@ -130,23 +132,23 @@
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
                   <div class="d-flex flex-column container">
-                    <label class="my-2">Father name:</label>
+                    <label class="my-2">Father's name:</label>
                     <input type="text" class="form-control" name="fathersName" required>
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
-                    <label class="my-2">Occupation</label>
-                    <input type="text" class="form-control" name="occupation" required>
+                    <label class="my-2">Father's Occupation</label>
+                    <input type="text" class="form-control" name="fathersOccupation" required>
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
-                    <label class="my-2">Telephone</label>
-                    <input type="tel" class="form-control" name="telephone" required>
+                    <label class="my-2">Father's Telephone</label>
+                    <input type="tel" class="form-control" name="fathersTelephone" required>
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
-                    <label class="my-2">Hometown</label>
-                    <input type="text" class="form-control" name="hometown" required>
+                    <label class="my-2">Father's Hometown</label>
+                    <input type="text" class="form-control" name="fathersHometown" required>
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
@@ -155,13 +157,13 @@
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
-                    <label class="my-2">Occupation</label>
-                    <input type="text" class="form-control" name="occupation" required>
+                    <label class="my-2">Mother's Occupation</label>
+                    <input type="text" class="form-control" name="mothersOccupation" required>
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
-                    <label class="my-2">Hometown</label>
-                    <input type="text" class="form-control" name="hometown" required>
+                    <label class="my-2">Mother's Hometown</label>
+                    <input type="text" class="form-control" name="mothersHometown" required>
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
@@ -170,25 +172,25 @@
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
-                    <label class="my-2">Telephone</label>
-                    <input type="tel" class="form-control" name="telephone" required>
+                    <label class="my-2">Mother's Telephone</label>
+                    <input type="tel" class="form-control" name="mothersTelephone" required>
                   </div>
 
                   <h4 class="mt-4 ms-3">Guardian's Details (If different from parents)</h4>
 
                   <div class="d-flex flex-column container mt-3">
-                    <label class="my-2">Name</label>
+                    <label class="my-2">Guardian's Name</label>
                     <input type="text" class="form-control" name="guardiansName">
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
-                    <label class="my-2">Place of Residence</label>
-                    <input type="text" class="form-control" name="placeOfResidence">
+                    <label class="my-2">Guardian's Residence</label>
+                    <input type="text" class="form-control" name="guardiansResidence">
                   </div>
 
                   <div class="d-flex flex-column container mt-4">
-                    <label class="my-2">Contact</label>
-                    <input type="tel" class="form-control" name="contact">
+                    <label class="my-2">Guardian's Contact</label>
+                    <input type="tel" class="form-control" name="guardianscontact">
                   </div>
             </div>
           </div>
@@ -204,12 +206,12 @@
             <div class="accordion-body">
                 <div class="d-flex flex-column container mt-4">
                   <label class="my-2">Emergency Contact Number</label>
-                  <input type="tel" class="form-control" name="emergencyContact">
+                  <input type="tel" class="form-control" name="emergencyContact" required>
                 </div>
 
                 <div class="d-flex flex-column container mt-4">
                   <label class="my-2">Personal Doctor Number</label>
-                  <input type="tel" class="form-control" name="doctor'sContact">
+                  <input type="tel" class="form-control" name="doctorsContact">
                 </div>
 
                 <div class="d-flex flex-column container mt-4">
