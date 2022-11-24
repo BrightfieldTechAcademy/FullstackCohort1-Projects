@@ -9,14 +9,16 @@
     <!-- Bootstrap css only -->
     <link rel="stylesheet" href="https://bootswatch.com/5/cosmo/bootstrap.min.css">
 
-    <!-- Bootstrap Icon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
   <nav class="navbar navbar-light bg-primary fixed-top" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
     <div class="container-fluid">
       <a href="/Dashbard.php" class="btn btn-light btn-sm py-1 px-3 me-auto">
-       <i class="bi bi-skip-backward-fill fs-4 text-primary"></i>  
+        <span class="material-icons fs-4 text-primary">
+          fast_rewind
+        </span> 
       </a>
       <a class="navbar-brand m-auto" href="#">
         <img src="<?php echo BASE_URL?>/Views/image/logo.jpg" class="thumbmail img-fluid" alt="" style="width: 80px; height: 60px;">  
@@ -242,8 +244,5 @@
       </div>
   </form> 
     
-
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
