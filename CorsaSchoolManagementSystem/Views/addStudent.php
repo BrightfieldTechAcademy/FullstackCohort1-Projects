@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corsa And Partners Boarding School Complex</title>
     <link rel="icon" href="<?php echo BASE_URL?>/Views/image/logo.jpg">
-    <!-- Bootstrap css only -->
     <link rel="stylesheet" href="https://bootswatch.com/5/cosmo/bootstrap.min.css">
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
@@ -31,7 +29,6 @@
   
   <form action="/addStudent.php" method="post" enctype="multipart/form-data" class="py-2 px-3 rounded container my-5" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
       <div class="container rounded m-auto" style="width: 13rem; height: 10rem; box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
-        <input type="file" name="fileToUpload" id="file" class="mt-3" onchange="preview()" required>
         <img id="picture" class="img-fluid" src=""/>
       </div>
       <div class="accordion container rounded py-2 px-3" id="accordionExample">
@@ -43,11 +40,16 @@
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body text-primary">
-                    <div class="d-flex flex-column container mt-4">
+
+                  <div class="d-flex flex-column container mt-4">
+                    <label for="firstName" class="my-2">Student's Photograph</label>
+                    <input type="file" name="fileToUpload" class="form-control" id="file" class="mt-3" onchange="preview()" required>
+                  </div>
+
+                  <div class="d-flex flex-column container mt-4">
                         <label for="firstName" class="my-2">First name</label>
                         <input type="text" class="form-control" id="fname" name="firstName" required>
                     </div>
-
                     <div class="d-flex flex-column container mt-4">
                         <label for="lastName" class="my-2">Last name:</label>
                         <input type="text" class="form-control" id="fname" name="lastName" required>
@@ -248,9 +250,8 @@
   <script type="text/javascript">
     let preview = () => {
       picture.src=URL.createObjectURL(event.target.files[0]);
-      document.getElementById("file").style.display = "none";
-      document.getElementById("picture").style.width = "100%";
-      document.getElementById("picture").style.height = "100%";
+      picture.style.width = "100%";
+      picture.style.height = "100%";
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
