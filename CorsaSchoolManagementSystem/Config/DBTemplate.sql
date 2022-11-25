@@ -23,13 +23,14 @@ CREATE TABLE StudentsInfo (
     gpsAddress VARCHAR(255),
     gender VARCHAR(255) NOT NULL,
     religion VARCHAR(255) NOT NULL,
-    formalSchool VARCHAR(255),
-    previousSchool VARCHAR(255) ,
+    formerSchool VARCHAR(255),
+    previousClass VARCHAR(255) ,
     classAdmitted  VARCHAR(255) NOT NULL,
-    yearOfAdmission  VARCHAR(255) NOT NULL
+    yearOfAdmission  VARCHAR(255) NOT NULL,
+    picture VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE StudentHealthInfo (
+CREATE TABLE StudentHealthsInfo (
     id int NOT NULL AUTO_INCREMENT,
     studentId int,
     emergencyContactNumber varchar (255) NOT NULL,
@@ -43,7 +44,7 @@ CREATE TABLE StudentHealthInfo (
 );
 
 
-CREATE TABLE ParentsInformation (
+CREATE TABLE ParentsInfo(
     id int NOT NULL AUTO_INCREMENT,
     studentId int,
     fathersName varchar(255) NOT NULL,

@@ -29,7 +29,7 @@
     <h5 class="fw-bolder"> STUDENT PERSONAL INFORMATION</h5>
   </div> 
   
-  <form action="/addStudent.php" method="post" class="py-2 px-3 rounded container my-5" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
+  <form action="/addStudent.php" method="post" enctype="multipart/form-data" class="py-2 px-3 rounded container my-5" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
       <div class="container rounded m-auto" style="width: 13rem; height: 10rem; box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
         <input type="file" name="fileToUpload" id="fileToUpload" class="mt-3" required>
       </div>
@@ -85,13 +85,13 @@
                     <div class="container mt-4">
                         <p class="mt-3 fw-bolder">Gender</p>
                          <div class="d-flex">
-                            <input type="radio" class="ps-2" name="gender">
+                            <input type="radio" class="ps-2" name="gender" value="Male">
                             <label for="male" class="p-2">Male</label>
                             
-                            <input type="radio" class="ps-2" name="gender">
+                            <input type="radio" class="ps-2" name="gender" value="Female">
                             <label for="female" class="p-2">Female</label>
                             
-                            <input type="radio" class="ps-2" name="gender">
+                            <input type="radio" class="ps-2" name="gender" value="Other">
                             <label for="other" class="p-2">Other</label>
                             
                          </div>
