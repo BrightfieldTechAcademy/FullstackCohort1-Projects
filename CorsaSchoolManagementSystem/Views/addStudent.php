@@ -32,7 +32,7 @@
   <form action="/addStudent.php" method="post" enctype="multipart/form-data" class="py-2 px-3 rounded container my-5" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
       <div class="container rounded m-auto" style="width: 13rem; height: 10rem; box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
         <input type="file" name="fileToUpload" id="file" class="mt-3" onchange="preview()" required>
-        <img id="picture" src=""/>
+        <img id="picture" class="img-fluid" src=""/>
       </div>
       <div class="accordion container rounded py-2 px-3" id="accordionExample">
         <div class="accordion-item my-4 border border-dark">
@@ -249,8 +249,8 @@
     let preview = () => {
       picture.src=URL.createObjectURL(event.target.files[0]);
       document.getElementById("file").style.display = "none";
-      document.getElementById("picture").style.width = "13rem";
-      document.getElementById("picture").style.height = "10rem";
+      document.getElementById("picture").style.width = "100%";
+      document.getElementById("picture").style.height = "100%";
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
