@@ -82,5 +82,10 @@ class Database
         }catch(PDOException $e){
             echo "Fetch failed: " . $e->getMessage();
         }
-      }
+    }
+
+    public function lastInsertId()
+    {
+      return $this->dbCon->lastInsertId();
+    }
 }

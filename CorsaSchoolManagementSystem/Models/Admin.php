@@ -56,8 +56,11 @@ class Admin extends User
         $this->db->bind(":classAdmitted",$student->classAdmitted);
         $this->db->bind(":yearOfAdmission",$student->yearOfAdmission);
         $this->db->bind(":picture",$student->picture);
+        $this->db->execute(); 
 
-        return $this->db->execute();    
+        return $this->db->lastInsertId();
+        
+    
     }
 
 }

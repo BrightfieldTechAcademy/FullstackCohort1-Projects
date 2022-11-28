@@ -2,11 +2,12 @@
 
 require_once("Core/init.php");
 
-class StudentData
+class StudentHealthData
 {
     public string $emergencyContactNumber;
     public string $personalDoctorNumber;
     public string $medicalFitnessNote;
+    public string $bloodGroup;
     public string $preferedDiet;
     public string $unpreferedDiet;
     public int $studentId;

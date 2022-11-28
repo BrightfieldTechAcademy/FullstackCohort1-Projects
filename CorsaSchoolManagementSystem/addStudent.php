@@ -36,14 +36,20 @@ if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
         } else {
             echo "File is not an image.";
         }
-        if($admin->addStudent($student)){
-             "Student has been added successfully";
-        }
-        
+        $studentId = $admin->addStudent($student);
 
-    
+        $studentHealthData = new StudentHealthData();
+        $studentHealthData->emergencyContactNumber = htmlspecialchars($_POST['emergencyContact']);
+        $studentHealthData->personalDoctorNumber = htmlspecialchars($_POST['doctorsContact']);
+        $studentHealthData->medicalFitnessNote = htmlspecialchars($_POST['fitnessNote']);
+        $studentHealthData->bloodGroup = htmlspecialchars($_POST['bloodGroup']);
+        $studentHealthData->preferedDiet = htmlspecialchars($_POST['preferedDiet']);
+        $studentHealthData->unpreferedDiet = htmlspecialchars($_POST['unpreferedDiet']);
+        $studentHealthData->studentId = $studentId;
 
-        //parents data
+        $admin->addStudentHealthData($studentHealthData);
+
+        $studentParentData = new StudentParentData();
         $fathersName = htmlspecialchars($_POST['fathersName']);
         $fathersOccupation = htmlspecialchars($_POST['fathersOccupation']);
         $fathersTelephone = htmlspecialchars($_POST['fathersTelephone']);
@@ -56,19 +62,8 @@ if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
         $guardiansName = htmlspecialchars($_POST['guardiansName']);
         $guardiansResidence = htmlspecialchars($_POST['guardiansResidence']);
         $guardiansContact = htmlspecialchars($_POST['guardiansContact']);
-
-        //health data
-        $emergencyContact = htmlspecialchars($_POST['emergencyContact']);
-        $doctorsContact = htmlspecialchars($_POST['doctorsContact']);
-        $fitnessNote = htmlspecialchars($_POST['fitnessNote']);
-        $bloodGroup = htmlspecialchars($_POST['bloodGroup']);
-        $preferedDiet = htmlspecialchars($_POST['preferedDiet']);
-        $unpreferedDiet = htmlspecialchars($_POST['unpreferedDiet']);
-
-
-
-
-
+        
+        $admin->addStudentParentData($studentParentData);
     }
     $template = new Template("Views/addStudent.php");
     echo $template;
