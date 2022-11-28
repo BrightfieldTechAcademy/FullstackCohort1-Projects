@@ -74,7 +74,7 @@
                                 <div class="card-body">
                                   <h5 class="card-title fs-3 py-3 fw-bolder">Add Student</h5>
                                   <i class="bi bi-universal-access bg-white text-dark rounded-circle px-1 py-1"></i>
-                                  <a href="/addStudent.php" class="btn ms-2 border border-light rounded-pill text-white">Click Me</a>
+                                  <a href="<?php echo BASE_URL. "/addStudent.php"?>" class="btn ms-2 border border-light rounded-pill text-white">Click Me</a>
                                 </div>
                             </div>
                         </div>

@@ -27,7 +27,7 @@
     <h5 class="fw-bolder"> STUDENT PERSONAL INFORMATION</h5>
   </div> 
   
-  <form action="/addStudent.php" method="post" enctype="multipart/form-data" class="py-2 px-3 rounded container my-5" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
+  <form action="<?php BASE_URL. "/addStudent.php"?>" method="post" enctype="multipart/form-data" class="py-2 px-3 rounded container my-5" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
       <div class="container rounded m-auto" style="width: 13rem; height: 10rem; box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
         <img id="picture" class="img-fluid" src=""/>
       </div>
