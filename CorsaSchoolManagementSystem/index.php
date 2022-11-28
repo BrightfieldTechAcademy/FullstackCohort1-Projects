@@ -3,9 +3,9 @@
 require('Core/init.php');
 
 $user = new User(new Database());
-session_start();
+
 if($_SESSION['loggedIn']){
-    header('Location: /dashboard.php');
+    header("Location: BASE_URL/dashboard.php");
 }else{
     if($_POST['loginAction']){
         $email = $_POST['email'];
@@ -19,7 +19,7 @@ if($_SESSION['loggedIn']){
                 if(password_verify($password, $data->password)){
                     $_SESSION['loggedIn'] = true;
                     $_SESSION['userType'] = UserType::ADMIN;
-                    header('Location: /dashboard.php');
+                    header("Location: BASE_URL/dashboard.php");
                 }else{
                     die("The <b>Password</b> provided does not exist");
                 }

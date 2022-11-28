@@ -62,7 +62,8 @@ if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
         $guardiansName = htmlspecialchars($_POST['guardiansName']);
         $guardiansResidence = htmlspecialchars($_POST['guardiansResidence']);
         $guardiansContact = htmlspecialchars($_POST['guardiansContact']);
-        
+        $studentParentData->studentId = $studentId;
+
         $admin->addStudentParentData($studentParentData);
     }
     $template = new Template("Views/addStudent.php");

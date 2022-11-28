@@ -63,10 +63,11 @@ class Admin extends User
     
     }
 
-    public function addStudentHealthData(StudentHealthData, $studentHealthData) {
+    public function addStudentHealthData(StudentHealthData $studentHealthData) {
 
         //Health Info
         $sql = "INSERT INTO StudentHealthsInfo (
+            studentId,
             emergencyContactNumber,
             personalDoctorNumber,
             medicalFitnessNote,
@@ -74,6 +75,7 @@ class Admin extends User
             preferedDiet,
             unpreferedDiet
         ) VALUES(
+            :studentId,
             :emergencyContactNumber,
             :personalDoctorNumber,
             :medicalFitnessNote,
@@ -83,6 +85,7 @@ class Admin extends User
         );";
 
         $this->db->query($sql);
+        $this->db->bind(":studentId", $studentHealthData->studentId);
         $this->db->bind(":emergencyContactNumber", $studentHealthData->emergencyContactNumber);
         $this->db->bind(":personalDoctorNumber", $studentHealthData->personalDoctorNumber);
         $this->db->bind(":medicalFitnessNote", $studentHealthData->medicalFitnessNote);
@@ -109,6 +112,7 @@ class Admin extends User
         residence,
         contact
        ) VALUES(
+        :studentId
         :fathersName,
         :fathersOccupation,
         :fathersTelephone,
@@ -123,6 +127,7 @@ class Admin extends User
        );";
         
         $this->db->query($sql);
+        $this->db->bind(":studentId", $this->studentParentData->studentId);
         $this->db->bind(":fathersName", $this->studentParentData->fathersName);
         $this->db->bind(":fathersOccupation", $this->studentParentData->fathersOccupation);
         $this->db->bind(":fathersTelephone", $this->studentParentData->fathersTelephone);
