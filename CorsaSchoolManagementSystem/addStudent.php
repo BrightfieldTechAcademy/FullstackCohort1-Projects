@@ -36,39 +36,34 @@ if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
         } else {
             echo "File is not an image.";
         }
-        if($admin->addStudent($student)){
-            echo "added";
-        }else{
-            echo "not added";
-        }
+        $studentId = $admin->addStudent($student);
 
-        // $studentHealthData = new StudentHealthData();
-        // $studentHealthData->emergencyContactNumber = htmlspecialchars($_POST['emergencyContact']);
-        // $studentHealthData->personalDoctorNumber = htmlspecialchars($_POST['doctorsContact']);
-        // $studentHealthData->medicalFitnessNote = htmlspecialchars($_POST['fitnessNote']);
-        // $studentHealthData->bloodGroup = htmlspecialchars($_POST['bloodGroup']);
-        // $studentHealthData->preferedDiet = htmlspecialchars($_POST['preferedDiet']);
-        // $studentHealthData->unpreferedDiet = htmlspecialchars($_POST['unpreferedDiet']);
-        // $studentHealthData->studentId = $studentId;
+        $studentHealthData = new StudentHealthData();
+        $studentHealthData->emergencyContactNumber = htmlspecialchars($_POST['emergencyContact']);
+        $studentHealthData->personalDoctorNumber = htmlspecialchars($_POST['doctorsContact']);
+        $studentHealthData->medicalFitnessNote = htmlspecialchars($_POST['fitnessNote']);
+        $studentHealthData->bloodGroup = htmlspecialchars($_POST['bloodGroup']);
+        $studentHealthData->preferedDiet = htmlspecialchars($_POST['preferedDiet']);
+        $studentHealthData->unpreferedDiet = htmlspecialchars($_POST['unpreferedDiet']);
+        $studentHealthData->studentId = $studentId;
 
-        // $admin->addStudentHealthData($studentHealthData);
+        $admin->addStudentHealthData($studentHealthData);
 
-        // $studentParentData = new StudentParentData();
-        // $fathersName = htmlspecialchars($_POST['fathersName']);
-        // $fathersOccupation = htmlspecialchars($_POST['fathersOccupation']);
-        // $fathersTelephone = htmlspecialchars($_POST['fathersTelephone']);
-        // $fathersHometown = htmlspecialchars($_POST['fathersHometown']);
-        // $mothersName = htmlspecialchars($_POST['mothersName']);
-        // $mothersOccupation = htmlspecialchars($_POST['mothersOccupation']);
-        // $mothersHometown = htmlspecialchars($_POST['mothersHometown']);
-        // $houseNumber = htmlspecialchars($_POST['houseNumber']);
-        // $mothersTelephone = htmlspecialchars($_POST['mothersTelephone']);
-        // $guardiansName = htmlspecialchars($_POST['guardiansName']);
-        // $guardiansResidence = htmlspecialchars($_POST['guardiansResidence']);
-        // $guardiansContact = htmlspecialchars($_POST['guardiansContact']);
-        // $studentParentData->studentId = $studentId;
-
-        // $admin->addStudentParentData($studentParentData);
+        $studentParentData = new StudentParentData();
+        $studentParentData->studentId = $studentId;
+        $studentParentData->fathersName = htmlspecialchars($_POST['fathersName']);
+        $studentParentData->fathersOccupation = htmlspecialchars($_POST['fathersOccupation']);
+        $studentParentData->fathersTelephone = htmlspecialchars($_POST['fathersTelephone']);
+        $studentParentData->fathersHometown = htmlspecialchars($_POST['fathersHometown']);
+        $studentParentData->mothersName = htmlspecialchars($_POST['mothersName']);
+        $studentParentData->mothersOccupation = htmlspecialchars($_POST['mothersOccupation']);
+        $studentParentData->mothersHometown = htmlspecialchars($_POST['mothersHometown']);
+        $studentParentData->houseNumber = htmlspecialchars($_POST['houseNumber']);
+        $studentParentData->mothersTelephone = htmlspecialchars($_POST['mothersTelephone']);
+        $studentParentData->guardiansName = htmlspecialchars($_POST['guardiansName']);
+        $studentParentData->guardiansResidence = htmlspecialchars($_POST['guardiansResidence']);
+        $studentParentData->guardiansContact = htmlspecialchars($_POST['guardiansContact']);
+        $admin->addStudentParentData($studentParentData);
     }
     $template = new Template("Views/addStudent.php");
     echo $template;

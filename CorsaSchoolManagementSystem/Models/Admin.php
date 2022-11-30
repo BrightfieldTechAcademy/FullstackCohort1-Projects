@@ -56,9 +56,9 @@ class Admin extends User
         $this->db->bind(":classAdmitted",$student->classAdmitted);
         $this->db->bind(":yearOfAdmission",$student->yearOfAdmission);
         $this->db->bind(":picture",$student->picture);
-        return $this->db->execute(); 
+        $this->db->execute(); 
 
-        // return $this->db->lastInsertId();
+        return $this->db->lastInsertId();
     }
 
     public function addStudentHealthData(StudentHealthData $studentHealthData) {
@@ -98,6 +98,7 @@ class Admin extends User
 
         //Parents Info
        $sql = "INSERT INTO ParentsInfo(
+        studentId,
         fathersName,
         fathersOccupation,
         fathersTelephone,
@@ -106,11 +107,12 @@ class Admin extends User
         mothersOccupation,
         mothersHometown,
         houseNumber,
+        mothersTelephone,
         guardiansName,
-        residence,
-        contact
+        guardiansResidence,
+        guardiansContact
        ) VALUES(
-        :studentId
+        :studentId,
         :fathersName,
         :fathersOccupation,
         :fathersTelephone,
@@ -119,9 +121,10 @@ class Admin extends User
         :mothersOccupation,
         :mothersHometown,
         :houseNumber,
+        :mothersTelephone,
         :guardiansName,
-        :residence,
-        :contact
+        :guardiansResidence,
+        :guardiansContact
        );";
         
         $this->db->query($sql);
@@ -134,9 +137,10 @@ class Admin extends User
         $this->db->bind(":mothersOccupation", $studentParentData->mothersOccupation);
         $this->db->bind(":mothersHometown", $studentParentData->mothersHometown);
         $this->db->bind(":houseNumber", $studentParentData->houseNumber);
+        $this->db->bind(":mothersTelephone", $studentParentData->mothersTelephone);
         $this->db->bind(":guardiansName", $studentParentData->guardiansName);
-        $this->db->bind(":residence", $studentParentData->residence);
-        $this->db->bind(":contact", $studentParentData->contact);
+        $this->db->bind(":guardiansResidence", $studentParentData->guardiansResidence);
+        $this->db->bind(":guardiansContact", $studentParentData->guardiansContact);
         $this->db->execute();
     }
 }

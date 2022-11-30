@@ -54,11 +54,11 @@ CREATE TABLE ParentsInfo(
     mothersName  varchar(255) NOT NULL,
     mothersOccupation varchar(255) NOT NULL,
     mothersHometown  varchar(255) NOT NULL,
-    house  varchar(255),
+    houseNumber  varchar(255),
     mothersTelephone  varchar(255) NOT NULL,
-    guardiansName  varchar(255) NOT NULL,
-    residence varchar(225),
-    contact varchar(225),
+    guardiansName  varchar(255),
+    guardiansResidence varchar(225),
+    guardiansContact varchar(225),
     PRIMARY KEY (id),
     FOREIGN KEY (studentId) references StudentsInfo(id)
 );
