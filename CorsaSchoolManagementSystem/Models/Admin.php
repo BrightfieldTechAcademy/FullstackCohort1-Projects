@@ -63,4 +63,82 @@ class Admin extends User
     
     }
 
+    public function addStudentHealthData(StudentHealthData $studentHealthData) {
+
+        //Health Info
+        $sql = "INSERT INTO StudentHealthsInfo (
+            studentId,
+            emergencyContactNumber,
+            personalDoctorNumber,
+            medicalFitnessNote,
+            bloodGroup,
+            preferedDiet,
+            unpreferedDiet
+        ) VALUES(
+            :studentId,
+            :emergencyContactNumber,
+            :personalDoctorNumber,
+            :medicalFitnessNote,
+            :bloodGroup,
+            :preferedDiet,
+            :unpreferedDiet
+        );";
+
+        $this->db->query($sql);
+        $this->db->bind(":studentId", $studentHealthData->studentId);
+        $this->db->bind(":emergencyContactNumber", $studentHealthData->emergencyContactNumber);
+        $this->db->bind(":personalDoctorNumber", $studentHealthData->personalDoctorNumber);
+        $this->db->bind(":medicalFitnessNote", $studentHealthData->medicalFitnessNote);
+        $this->db->bind(":bloodGroup", $studentHealthData->bloodGroup);
+        $this->db->bind(":preferedDiet", $studentHealthData->preferedDiet);
+        $this->db->bind(":unpreferedDiet", $studentHealthData->unpreferedDiet);
+        $this->db->execute();
+    }
+
+
+    public function addStudentParentData(StudentParentData $studentParentData) {
+
+        //Parents Info
+       $sql = "INSERT INTO ParentsInfo(
+        fathersName,
+        fathersOccupation,
+        fathersTelephone,
+        fathersHometown,
+        mothersName,
+        mothersOccupation,
+        mothersHometown,
+        houseNumber,
+        guardiansName,
+        residence,
+        contact
+       ) VALUES(
+        :studentId
+        :fathersName,
+        :fathersOccupation,
+        :fathersTelephone,
+        :fathersHometown,
+        :mothersName,
+        :mothersOccupation,
+        :mothersHometown,
+        :houseNumber,
+        :guardiansName,
+        :residence,
+        :contact
+       );";
+        
+        $this->db->query($sql);
+        $this->db->bind(":studentId", $this->studentParentData->studentId);
+        $this->db->bind(":fathersName", $this->studentParentData->fathersName);
+        $this->db->bind(":fathersOccupation", $this->studentParentData->fathersOccupation);
+        $this->db->bind(":fathersTelephone", $this->studentParentData->fathersTelephone);
+        $this->db->bind(":fathersHometown", $this->studentParentData->fathersHometown);
+        $this->db->bind(":mothersName", $this->studentParentData->mothersName);
+        $this->db->bind(":mothersOccupation", $this->studentParentData->mothersOccupation);
+        $this->db->bind(":mothersHometown", $this->studentParentData->mothersHometown);
+        $this->db->bind(":houseNumber", $this->studentParentData->houseNumber);
+        $this->db->bind(":guardiansName", $this->studentParentData->guardiansName);
+        $this->db->bind(":residence", $this->studentParentData->residence);
+        $this->db->bind(":contact", $this->studentParentData->contact);
+        $this->db->execute();
+    }
 }

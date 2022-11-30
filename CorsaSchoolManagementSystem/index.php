@@ -3,6 +3,7 @@
 require('Core/init.php');
 
 $user = new User(new Database());
+
 if($_SESSION['loggedIn']){
     header("Location: ". BASE_URL . "/dashboard.php");
 }else{
