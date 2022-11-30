@@ -56,11 +56,9 @@ class Admin extends User
         $this->db->bind(":classAdmitted",$student->classAdmitted);
         $this->db->bind(":yearOfAdmission",$student->yearOfAdmission);
         $this->db->bind(":picture",$student->picture);
-        $this->db->execute(); 
+        return $this->db->execute(); 
 
-        return $this->db->lastInsertId();
-        
-    
+        // return $this->db->lastInsertId();
     }
 
     public function addStudentHealthData(StudentHealthData $studentHealthData) {
@@ -127,18 +125,18 @@ class Admin extends User
        );";
         
         $this->db->query($sql);
-        $this->db->bind(":studentId", $this->studentParentData->studentId);
-        $this->db->bind(":fathersName", $this->studentParentData->fathersName);
-        $this->db->bind(":fathersOccupation", $this->studentParentData->fathersOccupation);
-        $this->db->bind(":fathersTelephone", $this->studentParentData->fathersTelephone);
-        $this->db->bind(":fathersHometown", $this->studentParentData->fathersHometown);
-        $this->db->bind(":mothersName", $this->studentParentData->mothersName);
-        $this->db->bind(":mothersOccupation", $this->studentParentData->mothersOccupation);
-        $this->db->bind(":mothersHometown", $this->studentParentData->mothersHometown);
-        $this->db->bind(":houseNumber", $this->studentParentData->houseNumber);
-        $this->db->bind(":guardiansName", $this->studentParentData->guardiansName);
-        $this->db->bind(":residence", $this->studentParentData->residence);
-        $this->db->bind(":contact", $this->studentParentData->contact);
+        $this->db->bind(":studentId", $studentParentData->studentId);
+        $this->db->bind(":fathersName", $studentParentData->fathersName);
+        $this->db->bind(":fathersOccupation", $studentParentData->fathersOccupation);
+        $this->db->bind(":fathersTelephone", $studentParentData->fathersTelephone);
+        $this->db->bind(":fathersHometown", $studentParentData->fathersHometown);
+        $this->db->bind(":mothersName", $studentParentData->mothersName);
+        $this->db->bind(":mothersOccupation", $studentParentData->mothersOccupation);
+        $this->db->bind(":mothersHometown", $studentParentData->mothersHometown);
+        $this->db->bind(":houseNumber", $studentParentData->houseNumber);
+        $this->db->bind(":guardiansName", $studentParentData->guardiansName);
+        $this->db->bind(":residence", $studentParentData->residence);
+        $this->db->bind(":contact", $studentParentData->contact);
         $this->db->execute();
     }
 }
