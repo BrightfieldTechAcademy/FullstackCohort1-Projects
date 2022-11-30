@@ -1,6 +1,9 @@
 <?php 
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+
 
 require_once('Config/Config.php');
 require_once('Helpers/UserType.php');

@@ -70,5 +70,6 @@ if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
     echo $template;
 
 }else{
-    header('Location: /index.php');
+    header("Location: ". BASE_URL . "/index.php");
+
 }

@@ -50,7 +50,7 @@
                     account_circle
                 </span>
                 </div>
-                <form method="POST" action="/index.php">
+                <form method="POST" action="<?php BASE_URL. "/index.php"?>">
                     <div class="mb-3 e-mail">
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" name="email" required>
                     </div>
