@@ -4,10 +4,10 @@ require('Core/init.php');
 
 $user = new User(new Database());
 
-if($_SESSION['loggedIn']){
+if(isset($_SESSION['loggedIn'])){
     header("Location: ". BASE_URL . "/dashboard.php");
 }else{
-    if($_POST['loginAction']){
+    if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['loginAction']){
         $email = $_POST['email'];
         $password = htmlspecialchars($_POST['password']);
         // Remove all illegal characters from email
