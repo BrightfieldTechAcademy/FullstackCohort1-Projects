@@ -57,7 +57,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
                                 <li class="nav-item active py-4 px-5">
-                                    <a href="/logout.php" type="button"  class="btn btn-sm text-white py-3 px-5 fs-4 logout">
+                                    <a href="<?php echo BASE_URL?>/logout.php" type="button"  class="btn btn-sm text-white py-3 px-5 fs-4 logout">
                                         <span class="material-icons">
                                         logout
                                         </span>Log out
@@ -74,7 +74,7 @@
                                 <div class="card-body">
                                   <h5 class="card-title fs-3 py-3 fw-bolder">Add Student</h5>
                                   <i class="bi bi-universal-access bg-white text-dark rounded-circle px-1 py-1"></i>
-                                  <a href="<?php echo BASE_URL. "/addStudent.php"?>" class="btn ms-2 border border-light rounded-pill text-white">Click Me</a>
+                                  <a href="<?php echo BASE_URL?>/addStudent.php" class="btn ms-2 border border-light rounded-pill text-white">Click Me</a>
                                 </div>
                             </div>
                         </div>
