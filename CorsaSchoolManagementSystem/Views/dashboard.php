@@ -165,72 +165,32 @@
                     <table id="example" class="table table-striped fs-3 table-bordered nowrap" style="width:100%">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Profile Picture</th>
+                                <th>Student's Name</th>
+                                <th>Class</th>
+                                <th>Gender</th>
+                                <th>Mother's Name</th>
+                                <th>Mother's Number</th>
+                                <th>Father's Name</th>
+                                <th>Father's Number</th>
+                                <th>Emergency Contact</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <?php foreach($studentDetails as $details): ?>
                             <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>$320,800</td>
+                                <td><img src="<?php echo BASE_URL . "/" .$details->picture?>" width="50" height="50" class="img-thumbnail" alt="<?php echo $details->firstname ."'s profile picture" ?>"/></td>
+                                <td><?php echo $details->firstname . ' ' . $details->middlename. ' ' .$details->lastname ?></td>
+                                <td><?php echo $details->classAdmitted ?></td>
+                                <td><?php echo $details->gender ?></td>
+                                <td><?php echo $details->mothersName ?></td>
+                                <td><?php echo $details->mothersTelephone ?></td>
+                                <td><?php echo $details->fathersName ?></td>
+                                <td><?php echo $details->fathersTelephone ?></td>
+                                <td><?php echo $details->emergencyContactNumber ?></td>
+
                             </tr>
-                                        
-                            <tr>
-                                <td>Herrod Chandler</td>
-                                <td>Sales Assistant</td>
-                                <td>San Francisco</td>
-                                <td>59</td>
-                                <td>2012-08-06</td>
-                                <td>$137,500</td>
-                            </tr>
-                            <tr>
-                                <td>Rhona Davidson</td>
-                                <td>Integration Specialist</td>
-                                <td>Tokyo</td>
-                                <td>55</td>
-                                <td>2010-10-14</td>
-                                <td>$327,900</td>
-                            </tr>
-                            <tr>
-                                <td>Colleen Hurst</td>
-                                <td>Javascript Developer</td>
-                                <td>San Francisco</td>
-                                <td>39</td>
-                                <td>2009-09-15</td>
-                                <td>$205,500</td>
-                            </tr>
-                            <tr>
-                                <td>Sonya Frost</td>
-                                <td>Software Engineer</td>
-                                <td>Edinburgh</td>
-                                <td>23</td>
-                                <td>2008-12-13</td>
-                                <td>$103,600</td>
-                            </tr>
-                            <tr>
-                                <td>Jena Gaines</td>
-                                <td>Office Manager</td>
-                                <td>London</td>
-                                <td>30</td>
-                                <td>2008-12-19</td>
-                                <td>$90,560</td>
-                            </tr>
-                            <tr>
-                                <td>Quinn Flynn</td>
-                                <td>Support Lead</td>
-                                <td>Edinburgh</td>
-                                <td>22</td>
-                                <td>2013-03-03</td>
-                                <td>$342,000</td>
-                            </tr>
+                            <?php endforeach;?>
                         </tbody>
                     </table> 
                 </div>  
