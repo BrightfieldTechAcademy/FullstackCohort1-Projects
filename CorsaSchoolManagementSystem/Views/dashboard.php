@@ -180,7 +180,7 @@
                             <?php foreach($studentDetails as $details): ?>
                             <tr>
                                 <td><img src="<?php echo BASE_URL . "/" .$details->picture?>" width="50" height="50" class="img-thumbnail" alt="<?php echo $details->firstname ."'s profile picture" ?>"/></td>
-                                <td><a href="<?php echo BASE_URL?>/studentDetails.php"><?php echo $details->firstname . ' ' . $details->middlename. ' ' .$details->lastname ?></a></td>
+                                <td><a href="<?php echo BASE_URL?>/studentDetails.php" class="text-decoration-none text-dark"><?php echo $details->firstname . ' ' . $details->middlename. ' ' .$details->lastname ?></a></td>
                                 <td><?php echo $details->classAdmitted ?></td>
                                 <td><?php echo $details->gender ?></td>
                                 <td><?php echo $details->mothersName ?></td>
