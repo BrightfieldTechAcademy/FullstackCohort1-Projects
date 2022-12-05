@@ -1,0 +1,132 @@
+
+:root{
+    --primary:white;
+    --secondary:rgb(5, 50, 133);
+    --body: rgb(252, 245, 245);
+  }
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+
+
+/* START HEADER */
+#header{
+    min-height: 10rem;
+    position: relative;
+
+}
+
+#header  img{
+    max-height: 17rem;
+    max-width: 10rem; 
+    margin: auto;
+
+}
+
+
+/* END HEADER */
+
+/* START OF PROFILE SECTION */
+
+
+#profileSection  #vectorForProfile img{
+    border-radius: 5rem;
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: black ;
+    height: 10rem;
+    width: 10rem;
+}
+
+#profileSection  section{
+    border-radius: 3rem;
+    
+}
+
+/* END OF PROFILE SECTION */
+
+
+/* START OF OTHER DETAILS */
+
+
+
+#otherDetails > section{
+    height:max-content;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+
+
+
+}
+
+#otherDetails li{
+    padding-top: 1rem;
+    position: relative;
+}
+
+
+#otherDetails hr{
+    width: 50%;
+    align-items: center;
+    
+}
+
+
+#firstSectionInOtherDetails{
+    height: max-content;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    position: relative;
+}
+
+
+#healthInfoSection{
+    background-color: var(--primary);
+    min-height: 20rem;
+    border: 0px solid black;
+}
+
+/* END OF OTHER DETAILS */
+
+
+
+/* START OF HEALTH INFOR */
+
+
+/* END OF HEALTH INFOR */
+
+
+
+/* START OF PARENTS OF INFORMATION */
+
+/* END OF PARENTS INFORMATION */
+
+
+
+/* START   OF  BILLING INFORMATION  */
+#billinginformation{
+    margin-top: 3rem;
+    height: 20rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+#billinginformation hr{
+    width: 30%;
+    align-items: center;
+    
+
+}
+#billinginformation center{
+    margin-top: 1rem;
+
+}
+
