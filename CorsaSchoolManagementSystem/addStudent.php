@@ -36,6 +36,7 @@ if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
         } else {
             echo "File is not an image.";
         }
+        $student->uuid = generateUuid();
         $studentId = $admin->addStudent($student);
 
         $studentHealthData = new StudentHealthData();
