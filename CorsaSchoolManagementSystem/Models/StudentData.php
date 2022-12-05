@@ -4,6 +4,7 @@ require_once("Core/init.php");
 
 class StudentData
 {
+    public string $uuid;
     public string $firstName;
     public string $middleName;
     public string $lastName;
@@ -19,4 +20,5 @@ class StudentData
     public string $classAdmitted;
     public string $yearOfAdmission;
     public string $picture;
+    
 }

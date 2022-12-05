@@ -7,6 +7,8 @@ if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
         //student data
         $student = new StudentData();
         $admin = new Admin(new Database());
+
+        $student->uuid = generateUuid();
         $student->firstName = htmlspecialchars($_POST['firstName']);
         $student->lastName = htmlspecialchars($_POST['lastName']);
         $student->middleName = htmlspecialchars($_POST['middleName']);
@@ -36,7 +38,6 @@ if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
         } else {
             echo "File is not an image.";
         }
-        $student->uuid = generateUuid();
         $studentId = $admin->addStudent($student);
 
         $studentHealthData = new StudentHealthData();
