@@ -8,6 +8,7 @@ class Admin extends User
     {
         //Student
         $sql = "INSERT INTO StudentsInfo(
+            uuid,
             firstname, 
             middlename,
             lastname,
@@ -24,6 +25,7 @@ class Admin extends User
             yearOfAdmission, 
             picture
         ) VALUES(
+            :uuid,
             :firstname, 
             :middlename, 
             :lastname,
@@ -41,6 +43,7 @@ class Admin extends User
             :picture
         );";
         $this->db->query($sql);
+        $this->db->bind(":uuid", $student->uuid);
         $this->db->bind(":firstname", $student->firstName);
         $this->db->bind(":middlename",$student->middleName);
         $this->db->bind(":lastname",$student->lastName);
