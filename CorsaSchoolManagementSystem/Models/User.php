@@ -18,10 +18,17 @@ class User{
         return $this->db->single();
     }
 
-    public function getStudentDetails()
+    public function getStudentsDetails()
     {
         $this->db->query("SELECT StudentsInfo.*, StudentHealthsInfo.*, ParentsInfo.* from StudentsInfo INNER JOIN StudentHealthsInfo ON StudentsInfo.id = StudentHealthsInfo.studentId INNER JOIN ParentsInfo  ON StudentsInfo.id = ParentsInfo.studentId ;");
         
         return $this->db->resultSet();
+    }
+
+    public function getStudentDetails(string $id)
+    {
+        $this->db->query("SELECT StudentsInfo.*, StudentHealthsInfo.*, ParentsInfo.* from StudentsInfo INNER JOIN StudentHealthsInfo ON StudentsInfo.id = StudentHealthsInfo.studentId INNER JOIN ParentsInfo  ON StudentsInfo.id = ParentsInfo.studentId  WHERE StudentsInfo.uuid = :uuid;");
+        $this->db->bind(":uuid", $id);
+        return $this->db->single();
     }
 }

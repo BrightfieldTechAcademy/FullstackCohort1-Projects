@@ -34,13 +34,13 @@
                         <!-- Content -->
                         
                         <div id="vectorForProfile">
-                            <center><img src="<?php echo BASE_URL?>/Views/image/olver.jpg" alt=""></center>
+                            <center><img src="<?php echo BASE_URL. "/". $studentDetails->picture?>" alt="" class="img-fluid img-thumbnail"></center>
 
                         </div>
                         <!-- name of student -->
                         <center>
                             <h4 class="text-uppercase fw-bold mt-4">
-                            <i class="fas fa-gem me-3"></i>Mr. Oliver Mensah
+                            <i class="fas fa-gem me-3"></i><?php echo $studentDetails->firstname . ' ' . $studentDetails->middlename . ' '.  $studentDetails->lastname; ?>
                             <small class="mute">STUDENT</small>
                         </h4>    
                         </center>
@@ -57,13 +57,13 @@
                         </h6>
                         </center> 
                         <hr>
-                        <p><strong>First Name:</strong> Cobby </p>
-                        <p><strong>Middle Name:</strong> Cobby </p>
+                        <p><strong>First Name:</strong> <?php echo $studentDetails->firstname?> </p>
+                        <p><strong>Middle Name:</strong> <?php echo $studentDetails->middlename?> </p>
 
-                        <p><strong>Last Name Name:</strong> Lorinda </p>
-                        <p><strong>Gender</strong> Male </p>
-                        <p><strong>Date of Birth:</strong>  31st January 2000 </p>
-                        <p><strong>Religion:</strong>  Christianity </p>
+                        <p><strong>Last Name Name:</strong> <?php echo $studentDetails->lastname?> </p>
+                        <p><strong>Gender</strong> <?php echo $studentDetails->gender?> </p>
+                        <p><strong>Date of Birth:</strong>  <?php echo date("jS F, Y", strtotime($studentDetails->dateOfBirth))?> </p>
+                        <p><strong>Religion:</strong>  <?php echo $studentDetails->religion?> </p>
                     </div>
                     <!-- Grid column -->
             
