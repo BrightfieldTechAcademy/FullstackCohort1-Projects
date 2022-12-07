@@ -101,7 +101,8 @@
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="academicInformation-tab" data-bs-toggle="tab" data-bs-target="#academicInformation" type="button" role="tab" aria-controls="academicInformation" aria-selected="false">
-            <center><h5 class="fw-bold">ACADEMIC INFORMATION</h5></center>
+            <center><h5 class="fw-bold">ACADEMIC INFORMATION</h5>
+            </center>
         </button>
       </li>
       <li class="nav-item" role="presentation">
@@ -132,8 +133,78 @@
       </div>
 
       <div class="tab-pane fade" id="academicInformation" role="tabpanel" aria-labelledby="academicInformation-tab">
-        <center><h4>Terminal Report</h4></center>
-        <h1>content</h1>
+        <center>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14); margin-right: 15rem; margin-top: 1rem;">
+            Add Results
+          </button>
+        </center>
+
+        <!--Academic  Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header bg-primary">
+                <h5 class="modal-title fw-bold fs-2 text-white" id="staticBackdropLabel">Terminal Report</h5>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <form action="" method="post">
+                    <div class="container my-3">
+                      <label class="fw-bold py-2">Full Name</label>
+                      <input type="text" name="fullname" class="form-control">
+                    </div>
+                    <div class="container my-3">
+                      <label class="fw-bold py-2">Gender</label>
+                      <input type="text" name="gender" class="form-control">
+                    </div>
+                    <div class="container my-3">
+                      <label class="fw-bold py-2">Class</label>
+                      <input type="text" name="class" class="form-control">
+                    </div>
+                    <div class="container my-3">
+                      <label class="fw-bold py-2">Term</label>
+                      <input type="text" name="fee" class="form-control">
+                    </div>
+                    <div class="container my-3">
+                      <label class="fw-bold py-2">Position In Class</label>
+                      <input type="text" name="feePaid" class="form-control">
+                    </div>
+                   
+                    <div class="container mt-3 mb-2">
+                      <input type="submit" name="addResults" class="form-control btn btn-sm btn-primary fw-bold py-2">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Report -->
+        <div class="container mt-5 text-center">
+          <h2 class="fw-bolder py-2">Terminal Report</h2>
+          <div class="table-responsive">
+            <table class="table table-primary table-striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Class</th>
+                  <th>Term</th>
+                  <th>Position In Class</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                 
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
 
       <div class="tab-pane fade" id="parentInformation" role="tabpanel" aria-labelledby="parentInformation-tab">
@@ -157,14 +228,16 @@
         </div>
       </div>
     </div>
-    </div>
+    
+  </div>
     <!-- bills payment -->
 
     <!-- Button trigger modal -->
   <div class="container" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
     <button type="button" class="btn btn-primary mt-5 mb-2 mx-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
-      Payment Of Fees
+      Payment Fees
     </button>
+
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -211,7 +284,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
