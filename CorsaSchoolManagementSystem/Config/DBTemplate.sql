@@ -13,7 +13,7 @@ CREATE TABLE Users (
 
 CREATE TABLE StudentsInfo (
     id INT  AUTO_INCREMENT PRIMARY KEY,
-    uuid VARCHAR(255) UNIQUE;
+    uuid VARCHAR(255) UNIQUE,
     firstname VARCHAR(255) NOT NULL,
     middlename VARCHAR(255),
     lastname VARCHAR(255) NOT NULL,

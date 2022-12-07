@@ -31,6 +31,9 @@
                     <a class="list-group-item list-group-item-action p-3" href="#!">
                         <span class="material-icons">person</span>Teachers
                     </a>
+                    <a class="list-group-item list-group-item-action p-3" href="">
+                        <span class="material-icons">person</span>Fee Payment
+                    </a>
                     <a class="list-group-item list-group-item-action p-3" href="#!">
                         <span class="material-icons">admin_panel_settings</span> Admin
                     </a>
