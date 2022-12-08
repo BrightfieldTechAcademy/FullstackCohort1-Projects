@@ -151,7 +151,7 @@
           </h2>
           <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
             <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> 
+              <small>Add students academic Information</small>
                     <!-- Terminal Report -->
                     <div class="container mt-5 ">
                             <h2 class="fw-bolder py-2 text-center">Terminal Report</h2>
