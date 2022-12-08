@@ -13,6 +13,10 @@
       body {
         font-family: 'Poppins', sans-serif;
       }
+      .accordion-button:focus {
+        box-shadow: none;
+        border-color: rgba(0,0,0,.125);
+        }
     </style>
 </head>
 <body>
@@ -40,7 +44,7 @@
               <!-- Content -->                        
               <div id="vectorForProfile">
                 <center>
-                  <img src="<?php echo BASE_URL. "/". $studentDetails->picture?>" alt="" class="img-fluid img-thumbnail">
+                  <img src="<?php echo BASE_URL. "/uploads/". $studentDetails->picture?>" alt="" class="img-fluid img-thumbnail">
                 </center>
               </div>
               <!-- name of student -->
@@ -118,14 +122,14 @@
             <ul style="list-style: none;" class="pt-3">
                 <li class="my-2"> <strong>EMERGENCY CONTACT NUMBER : </strong><?php echo $studentDetails->emergencyContactNumber?> </li>
                 <li class="my-2"> <strong>PERSONAL DOCTOR'S NUMBER : </strong><?php echo $studentDetails->personalDoctorNumber?> </li>
-                <li class="my-2"> <strong>MEDICAL FITNESS NOTE : </strong> <?php echo $studentDetails->medicalFitnessNote?></li>  
+                <li class="my-2"> <strong>MEDICAL FITNESS NOTE&nbsp : </strong> <?php echo $studentDetails->medicalFitnessNote?></li>  
             </ul>
           </div>
 
           <div class="col-xm-12 col-sm-6 col-md-6 col-lg-6">
             <ul style="list-style: none;" class="pt-3" >
-                <li class="my-2"> <strong>BLOOD GROUP : </strong> <?php echo $studentDetails->bloodGroup?> </li>
-                <li class="my-2"> <strong>PREFERED DIET : </strong> <?php echo $studentDetails->preferedDiet?> </li>
+                <li class="my-2"> <strong>BLOOD GROUP &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: </strong> <?php echo $studentDetails->bloodGroup?> </li>
+                <li class="my-2"> <strong>PREFERED DIET &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: </strong> <?php echo $studentDetails->preferedDiet?> </li>
                 <li class="my-2"> <strong>UNPREFERED DIET : </strong> <?php echo $studentDetails->unpreferedDiet?> </li>
             </ul>
           </div>
@@ -133,80 +137,348 @@
       </div>
 
       <div class="tab-pane fade" id="academicInformation" role="tabpanel" aria-labelledby="academicInformation-tab">
-        <center>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14); margin-right: 15rem; margin-top: 1rem;">
-            Add Results
-          </button>
-        </center>
+        
 
-        <!--Academic  Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-              <div class="modal-header bg-primary">
-                <h5 class="modal-title fw-bold fs-2 text-white" id="staticBackdropLabel">Terminal Report</h5>
-                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <div class="container">
-                  <form action="" method="post">
-                    <div class="container my-3">
-                      <label class="fw-bold py-2">Full Name</label>
-                      <input type="text" name="fullname" class="form-control">
-                    </div>
-                    <div class="container my-3">
-                      <label class="fw-bold py-2">Gender</label>
-                      <input type="text" name="gender" class="form-control">
-                    </div>
-                    <div class="container my-3">
-                      <label class="fw-bold py-2">Class</label>
-                      <input type="text" name="class" class="form-control">
-                    </div>
-                    <div class="container my-3">
-                      <label class="fw-bold py-2">Term</label>
-                      <input type="text" name="fee" class="form-control">
-                    </div>
-                    <div class="container my-3">
-                      <label class="fw-bold py-2">Position In Class</label>
-                      <input type="text" name="feePaid" class="form-control">
-                    </div>
-                   
-                    <div class="container mt-3 mb-2">
-                      <input type="submit" name="addResults" class="form-control btn btn-sm btn-primary fw-bold py-2">
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Terminal Report -->
-        <div class="container mt-5 text-center">
-          <h2 class="fw-bolder py-2">Terminal Report</h2>
-          <div class="table-responsive">
-            <table class="table table-primary table-striped">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Class</th>
-                  <th>Term</th>
-                  <th>Position In Class</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                 
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
 
+        <!-- accordion for academic information -->
+              <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+               <strong>ADD STUDENTS RESULTS</strong> 
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> 
+                    <!-- Terminal Report -->
+                    <div class="container mt-5 ">
+                            <h2 class="fw-bolder py-2 text-center">Terminal Report</h2>
+
+                            <div>
+                              <label for="term">TERM</label>
+                                <select class="text-start mb-3 mt-1" name="term" id="term">
+                                      <option value="firstTerm">First Term</option>
+                                      <option value="secondterm">Second Term</option>
+                                      <option value="thirdterm">Third Term</option>
+                                </select>
+                                <p>CURRENT FORM/CLASS :  GRADE 5</p>
+
+
+                            </div>
+                            <div class="table-responsive">
+                              <table class="table table-primary table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>Subject</th>
+                                    <th>Class Score (40%)</th>
+                                    <th>Exams Score (60%)</th>
+                                    <th>Position/Grade</th>
+
+                                    <th>Remarks</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>English Language</td>
+                                    <td><input type="number" max = "40" min="0"></td>
+                                    <td><input type="number"  max="60" min="0"></td>
+                                    <td><input type="text"  max="60" min="0"></td>
+
+                                    <td>
+                                      <select name="remarks" id="remarks">
+                                      <option value="Excellent">Excellent</option>
+                                      <option value="verygood">Very Good</option>
+                                      <option value="good">Good</option>
+                                      <option value="pass">Pass</option>
+                                      </select>
+                                    </td> 
+                                  </tr>
+
+                                  <tr>
+                                    <td>Integrated Science</td>
+                                    <td><input type="number" max = "40" min="0"></td>
+                                    <td><input type="number"  max="60" min="0"></td>
+                                    <td><input type="text"></td>
+
+                                    <td>
+                                      <select name="remarks" id="remarks">
+                                      <option value="Excellent">Excellent</option>
+                                      <option value="verygood">Very Good</option>
+                                      <option value="good">Good</option>
+                                      <option value="pass">Pass</option>
+                                      </select>
+                                    </td> 
+                                  </tr>
+
+                                  <tr>
+                                    <td>Mathematics</td>
+                                    <td><input type="number" max = "40" min="0"></td>
+                                    <td><input type="number"  max="60" min="0"></td>
+                                    <td><input type="text"></td>
+
+                                    <td>
+                                      <select name="remarks" id="remarks">
+                                      <option value="Excellent">Excellent</option>
+                                      <option value="verygood">Very Good</option>
+                                      <option value="good">Good</option>
+                                      <option value="pass">Pass</option>
+                                      </select>
+                                    </td> 
+                                  </tr>
+
+                                  <tr>
+                                    <td>Subject</td>
+                                    <td><input type="number" max = "40" min="0"></td>
+                                    <td><input type="number"  max="60" min="0"></td>
+                                    <td><input type="text"></td>
+
+                                    <td>
+                                      <select name="remarks" id="remarks">
+                                      <option value="Excellent">Excellent</option>
+                                      <option value="verygood">Very Good</option>
+                                      <option value="good">Good</option>
+                                      <option value="pass">Pass</option>
+                                      </select>
+                                    </td> 
+                                  </tr>
+
+                                  <tr>
+                                    <td>Subject</td>
+                                    <td><input type="number" max = "40" min="0"></td>
+                                    <td><input type="number"  max="60" min="0"></td>
+                                    <td><input type="text"></td>
+
+                                    <td>
+                                      <select name="remarks" id="remarks">
+                                      <option value="Excellent">Excellent</option>
+                                      <option value="verygood">Very Good</option>
+                                      <option value="good">Good</option>
+                                      <option value="pass">Pass</option>
+                                      </select>
+                                    </td> 
+                                  </tr>
+
+                                  <tr>
+                                    <td>Subject</td>
+                                    <td><input type="number" max = "40" min="0"></td>
+                                    <td><input type="number"  max="60" min="0"></td>
+                                    <td><input type="text"></td>
+
+                                    <td>
+                                      <select name="remarks" id="remarks">
+                                      <option value="Excellent">Excellent</option>
+                                      <option value="verygood">Very Good</option>
+                                      <option value="good">Good</option>
+                                      <option value="pass">Pass</option>
+                                      </select>
+                                    </td> 
+                                  </tr>
+
+                                  <tr>
+                                    <td>Subject</td>
+                                    <td><input type="number" max = "40" min="0"></td>
+                                    <td><input type="number"  max="60" min="0"></td>
+                                    <td><input type="text"></td>
+
+                                    <td>
+                                      <select name="remarks" id="remarks">
+                                      <option value="Excellent">Excellent</option>
+                                      <option value="verygood">Very Good</option>
+                                      <option value="good">Good</option>
+                                      <option value="pass">Pass</option>
+                                      </select>
+                                    </td> 
+                                  </tr>
+
+                                  <tr>
+                                    <td>Subject</td>
+                                    <td><input type="number" max = "40" min="0"></td>
+                                    <td><input type="number"  max="60" min="0"></td>
+                                    <td><input type="text"></td>
+
+                                    <td>
+                                      <select name="remarks" id="remarks">
+                                      <option value="Excellent">Excellent</option>
+                                      <option value="verygood">Very Good</option>
+                                      <option value="good">Good</option>
+                                      <option value="pass">Pass</option>
+                                      </select>
+                                    </td> 
+                                  </tr>
+                                  
+                                 
+                              
+                                </tbody>
+                              </table>
+                              <div>
+                                    <p><strong> Average Score :</strong> 32423</p>
+                                    <p><strong>Position/Grade :</strong>First</p>
+
+                                  </div>
+                              <center>
+                              <button type="button" class="btn btn-primary"  style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);  margin-top: 1rem;">
+                              SAVE
+                              </button>
+                            </center>
+                            </div>
+                          </div>
+                        </div>      </div>
+                      </div>
+                    </div>
+        <div class="accordion-item mt-3">
+          <h2 class="accordion-header text-center" id="panelsStayOpen-headingTwo">
+          
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+               <strong>CLICK ME</strong><small> &nbspTo access student's academic records for each term</small>
+              </button>
+            
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+              <small> You are required to choose the particular term and class Academic records you wish to access. Click on the Get button to Reqest for Information</small>
+              <div class="container mt-5 ">
+                <!-- accordion body  start-->
+
+                            <h2 class="fw-bolder py-2 text-center">Terminal Report</h2>
+                        <div class="row text-center">
+                          <div class="col-4">
+                          <div>
+                              <label for="term">TERM</label>
+                                <select class="text-start mb-3 mt-1" name="term" id="term">
+                                      <option value="firstTerm">First Term</option>
+                                      <option value="secondterm">Second Term</option>
+                                      <option value="thirdterm">Third Term</option>
+                                </select>
+                             </div>
+                          </div>
+
+                          <div class="col-4">
+                          <div>
+                                <label for="term">CLASS</label>
+                                <select class="text-start mb-3 mt-1" name="term" id="term">
+                                      <option value="classOne">Class One</option>
+                                      <option value="classTwo">Class Two</option>
+                                      <option value="classThree">ClassThree</option>
+                                      <option value="classFour">Class Four</option>
+                                      <option value="classFive">Class Five</option>
+                                      <option value="classSix">Class Six</option>
+                                      <option value="formOne">Form 1</option>
+                                      <option value="formTwo">Form 2</option>
+                                      <option value="formThree">Form 3</option>
+                                      
+                                </select>   
+                             </div>
+                          </div>
+                          
+                          <div class="col-4">
+                             <div>
+                                <button type="button" class="btn btn-primary ">GET</button>
+                             </div>
+                          </div>
+                        </div> 
+                        <!-- end of row -->
+                            
+                            
+                             
+                               
+
+
+                        <!-- table start -->
+                            <div class="table-responsive">
+                              <table class="table table-light">
+                                <thead>
+                                  <tr>
+                                    <th>Subject</th>
+                                    <th>Class Score (40%)</th>
+                                    <th>Exams Score (60%)</th>
+                                    <th>Position/Grade</th>
+
+                                    <th>Remarks</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>English Language</td>
+                                    <td>40</td>
+                                    <td>60</td>
+                                    <td>A1</td>
+                                    <td>Excellent</td> 
+                                  </tr>
+
+                                  <tr>
+                                    <td>Integrated Science</td>
+                                    <td>40</td>
+                                    <td>60</td>
+                                    <td>A1</td>
+                                    <td>Excellent</td> 
+                                  </tr>
+
+                                  <tr>
+                                    <td>Mathematics</td>
+                                    <td>40</td>
+                                    <td>60</td>
+                                    <td>A1</td>
+                                    <td>Excellent</td> 
+                                  </tr>
+
+                                  <tr>
+                                    <td>Subject</td>
+                                    <td>40</td>
+                                    <td>60</td>
+                                    <td>A1</td>
+
+                                    <td>Good</td> 
+                                  </tr>
+
+                                  <tr>
+                                    <td>Subject</td>
+                                    <td>40</td>
+                                    <td>60</td>
+                                    <td>A1</td>
+                                    <td>Good</td> 
+                                  </tr>
+
+                                  <tr>
+                                    <td>Subject</td>
+                                    <td>40</td>
+                                    <td>60</td>
+                                    <td>A1</td>
+                                    <td>Good</td> 
+                                  </tr>
+
+                                  <tr>
+                                    <td>Subject</td>
+                                    <td>40</td>
+                                    <td>60</td>
+                                    <td>A1</td>
+                                    <td>Good</td> 
+                                  </tr>
+
+                                  <tr>
+                                    <td>Subject</td>
+                                    <td>40</td>
+                                    <td>60</td>
+                                    <td>A1</td>
+                                    <td>Good</td> 
+                                  </tr>
+                                  
+                                 
+                              
+                                </tbody>
+                              </table>
+                              <div>
+                                    <p><strong> Average Score :</strong> 32423</p>
+                                    <p><strong>Position/Grade :</strong>First</p>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>      
+                       </div>
+                      </div>
+                    </div>
       <div class="tab-pane fade" id="parentInformation" role="tabpanel" aria-labelledby="parentInformation-tab">
         <div class="row">
             <div class="col-4">
