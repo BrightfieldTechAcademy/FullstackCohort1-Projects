@@ -13,7 +13,7 @@ CREATE TABLE Users (
 
 CREATE TABLE StudentsInfo (
     id INT  AUTO_INCREMENT PRIMARY KEY,
-    uuid VARCHAR(255) UNIQUE,
+    uuid VARCHAR(255) UNIQUE;
     firstname VARCHAR(255) NOT NULL,
     middlename VARCHAR(255),
     lastname VARCHAR(255) NOT NULL,
@@ -63,4 +63,23 @@ CREATE TABLE ParentsInfo(
     PRIMARY KEY (id),
     FOREIGN KEY (studentId) references StudentsInfo(id)
 );
+
+CREATE TABLE StudentFees(
+    id int NOT NULL AUTO_INCREMENT,
+    studentId int,
+    fullName varchar(255) NOT NULL,
+    gender  varchar(255) NOT NULL,
+    class  varchar(255) NOT NULL,
+    feeToPay  varchar(255) NOT NULL,
+    amountPaid  varchar(255) NOT NULL,
+    amountLeftToPaid  varchar(255) NOT NULL,
+    term varchar(255) NOT NULL,
+    dateOfPayment  varchar(255) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (studentId) references StudentsInfo(id)
+    );
+
+
+
+
 
