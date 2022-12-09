@@ -6,7 +6,7 @@ if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
     if($_POST['addfees']){
         //student fees
         $admin = new Admin(new Database());
-        $studentFees = new studentFees();
+        $studentFees = new StudentFees();
 
         $studentFees->studentId = $studentId;
         $studentFees->fullName = htmlspecialchars($_POST['fullName']);
