@@ -64,20 +64,17 @@ CREATE TABLE ParentsInfo(
     FOREIGN KEY (studentId) references StudentsInfo(id)
 );
 
-CREATE TABLE StudentFees(
+CREATE TABLE StudentsFees(
     id int NOT NULL AUTO_INCREMENT,
     studentId int,
-    fullName varchar(255) NOT NULL,
-    gender  varchar(255) NOT NULL,
-    class  varchar(255) NOT NULL,
-    feeToPay  varchar(255) NOT NULL,
+    termFees  varchar(255) NOT NULL,
     amountPaid  varchar(255) NOT NULL,
-    amountLeftToPaid  varchar(255) NOT NULL,
     term varchar(255) NOT NULL,
+    academicYear varchar(255) NOT NULL,
     dateOfPayment  varchar(255) NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (studentId) references StudentsInfo(id)
-    );
+);
 
 
 
