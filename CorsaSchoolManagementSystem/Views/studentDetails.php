@@ -370,7 +370,7 @@
                   <input type="text" name="status" class="form-control">
                 </div>
                 <div class="container mt-3 mb-2">
-                  <input type="addfees" name="payFee" class="form-control btn btn-sm btn-primary fw-bold py-2">
+                  <input type="submit" name="payFee" class="form-control btn btn-sm btn-primary fw-bold py-2">
                 </div>
               </form>
             </div>

@@ -3,7 +3,7 @@
 require('Core/init.php');
 
 if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
-    if($_POST['addfees']){
+    if($_POST['payFee']){
         //student fees
         $admin = new Admin(new Database());
         $studentFees = new StudentFees();
