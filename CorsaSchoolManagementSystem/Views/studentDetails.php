@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="https://bootswatch.com/5/cosmo/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,700;1,100;1,300;1,500&display=swap" rel="stylesheet">
+    
+    <!-- datatables css -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.bootstrap.min.css">
+    
     <style>
       body {
         font-family: 'Poppins', sans-serif;
@@ -107,7 +113,7 @@
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="parentInformation-tab" data-bs-toggle="tab" data-bs-target="#parentInformation" type="button" role="tab" aria-controls="parentInformation" aria-selected="false">
-        <center><h5 class="fw-bold">PARENT'S INFORMATION</h5></center>
+         <center><h5 class="fw-bold">PARENT'S INFORMATION</h5></center>
         </button>
       </li>
     </ul>
@@ -141,7 +147,7 @@
 
         <!--Academic  Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
               <div class="modal-header bg-primary">
                 <h5 class="modal-title fw-bold fs-2 text-white" id="staticBackdropLabel">Terminal Report</h5>
@@ -154,21 +160,94 @@
                       <label class="fw-bold py-2">Full Name</label>
                       <input type="text" name="fullname" class="form-control">
                     </div>
-                    <div class="container my-3">
-                      <label class="fw-bold py-2">Gender</label>
-                      <input type="text" name="gender" class="form-control">
+                    <div class="container my-3 d-flex">
+                      <div class="m-2">
+                        <label class="fw-bold py-2">Gender</label>
+                        <input type="text" name="gender" class="form-control">
+                      </div>
+                      <div class="m-2">
+                        <label class="fw-bold py-2">Class</label>
+                        <input type="text" name="class" class="form-control">
+                      </div>
                     </div>
                     <div class="container my-3">
-                      <label class="fw-bold py-2">Class</label>
-                      <input type="text" name="class" class="form-control">
+                      <table class="table table-striped table-primary">
+                        <thead>
+                          <tr>
+                            <th>Subjects</th>
+                            <th>Class Score (%)</th>
+                            <th>Exam Score (%)</th>
+                            <th>Remarks</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>English Language</td>
+                            <td><input type="number" class="form-control"></td>
+                            <td><input type="number" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                          <tr>
+                            <td>Mathematics</td>
+                            <td><input type="number" class="form-control"></td>
+                            <td><input type="number" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                          <tr>
+                            <td>Social Studies</td>
+                            <td><input type="number" class="form-control"></td>
+                            <td><input type="number" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                          <tr>
+                            <td>Integrated Science</td>
+                            <td><input type="number" class="form-control"></td>
+                            <td><input type="number" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                          <tr>
+                            <td>Others</td>
+                            <td><input type="number" class="form-control"></td>
+                            <td><input type="number" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
-                    <div class="container my-3">
-                      <label class="fw-bold py-2">Term</label>
-                      <input type="text" name="fee" class="form-control">
+                    <div class="container my-3 d-flex">
+                      <div class="m-2">
+                        <label class="fw-bold py-2">Total Score</label>
+                        <input type="text" name="totalScore" class="form-control">
+                      </div>
+                      <div class="m-2">
+                        <label class="fw-bold py-2">Average Score (%)</label>
+                        <input type="text" name="averageScore" class="form-control">
+                      </div>
                     </div>
-                    <div class="container my-3">
-                      <label class="fw-bold py-2">Position In Class</label>
-                      <input type="text" name="feePaid" class="form-control">
+                    <div class="container my-3 d-flex">
+                      <div class="m-2">
+                        <label class="fw-bold py-2">Grade</label>
+                        <input type="text" name="grade" class="form-control">
+                      </div>
+                      <div class="m-2">
+                        <label class="fw-bold py-2">No. on roll</label>
+                        <input type="text" name="roll" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="container my-3 d-flex">
+                      <div class="m-2">
+                        <label class="fw-bold py-2">Term</label>
+                        <select name="" class="form-control">
+                          <option value="">First Term</option>
+                          <option value="">Second Term</option>
+                          <option value="">Third Term</option>
+                        </select>
+                      </div>
+                      <div class="m-2">
+                        <label class="fw-bold py-2">Position In Class</label>
+                        <input type="text" name="position" class="form-control">
+                      </div>
                     </div>
                    
                     <div class="container mt-3 mb-2">
@@ -187,21 +266,23 @@
         <!-- Terminal Report -->
         <div class="container mt-5 text-center">
           <h2 class="fw-bolder py-2">Terminal Report</h2>
-          <div class="table-responsive">
-            <table class="table table-primary table-striped">
+          <div class="table-responsive container">
+            <table class="table table-striped table-bordered nowrap container" style="width:100%">
               <thead>
                 <tr>
                   <th>Name</th>
                   <th>Class</th>
+                  <th>Gender</th>
+                  <th>Subjects</th>
+                  <th>Total Score</th>
+                  <th>Average Score (%)</th>
+                  <th>Grade</th>
                   <th>Term</th>
+                  <th>No. on roll</th>
                   <th>Position In Class</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                 
-                </tr>
-              </tbody>
+          
             </table>
           </div>
         </div>
@@ -232,22 +313,19 @@
   </div>
     <!-- bills payment -->
 
-    <!-- Button trigger modal -->
-  <div class="container" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
-    <button type="button" class="btn btn-primary mt-5 mb-2 mx-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
-      Payment Fees
-    </button>
+    <!-- Fee Payment -->
+  <div class="container p-4" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
 
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header bg-primary">
-            <h5 class="modal-title fw-bold fs-2 text-white" id="staticBackdropLabel">Fees Payment</h5>
-            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="container">
+    <div class="accordion m-3" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button container" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <strong>Add Fee Payment</strong>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+          <div class="container">
               <form action="" method="post">
                 <div class="container my-3">
                   <label class="fw-bold py-2">Full Name</label>
@@ -274,6 +352,14 @@
                   <input type="text" name="feeLeft" class="form-control">
                 </div>
                 <div class="container my-3">
+                  <label class="fw-bold py-2">Term</label>
+                  <input type="text" name="term" class="form-control">
+                </div>
+                <div class="container my-3">
+                  <label class="fw-bold py-2">Date of Payment</label>
+                  <input type="text" name="dateOfPayment" class="form-control">
+                </div>
+                <div class="container my-3">
                   <label class="fw-bold py-2">Status</label>
                   <input type="text" name="status" class="form-control">
                 </div>
@@ -283,16 +369,14 @@
               </form>
             </div>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-          </div>
         </div>
       </div>
     </div>
+   
     <!-- Payment Report -->
     <div class="container mt-3 text-center">
       <h2 class="fw-bolder py-2">Payment Report</h2>
-      <div class="table-responsive">
+      <!-- <div class="table-responsive container">
         <table class="table table-primary table-striped">
           <thead>
             <tr>
@@ -315,17 +399,48 @@
             </tr>
           </tbody>
         </table>
+      </div> -->
+
+      <div class="container search">
+        <table id="example" class="table table-striped table-bordered nowrap" style="width:100%">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Class</th>
+              <th>Gender</th>
+              <th>Fee To Pay</th>
+              <th>Amount Paid</th>
+              <th>Amount Left To Be Paid</th>
+              <th>Status</th>
+              <th>Term Paid</th>
+              <th>Date of Payment</th>
+            </tr>
+          </thead>
+          
+        </table>
       </div>
     </div>
   </div>
 
-  
 
-  <footer class="bg-primary mt-5">
-    <div class="p-5">
-      <h4 class="text-center text-white">All Rights Reserved By Richmond Andoh</h4>
-    </div>
-  </footer>
+  <!-- datatables -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+ 
+       <script src="https://cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js"></script>
+       <script src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
+       <script src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap.min.js"></script>
+         <script>
+             $(document).ready(function() {
+                 var table = $('#example').DataTable( {
+                     responsive: true
+                 } );
+             
+                 new $.fn.dataTable.FixedHeader( table );
+             });        
+         </script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
