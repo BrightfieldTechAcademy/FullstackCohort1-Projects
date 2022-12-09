@@ -75,7 +75,6 @@ CREATE TABLE studentFees(
     amountLeftToPaid  varchar(255) NOT NULL,
     term varchar(255) NOT NULL,
     dateOfPayment  varchar(255) NOT NULL,
-    status varchar(255) NOT NULL
     PRIMARY KEY (id),
     FOREIGN KEY (studentId) references StudentsInfo(id)
     );
