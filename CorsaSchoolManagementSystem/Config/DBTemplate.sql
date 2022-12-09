@@ -64,7 +64,7 @@ CREATE TABLE ParentsInfo(
     FOREIGN KEY (studentId) references StudentsInfo(id)
 );
 
-CREATE TABLE studentFees(
+CREATE TABLE StudentFees(
     id int NOT NULL AUTO_INCREMENT,
     studentId int,
     fullName varchar(255) NOT NULL,
