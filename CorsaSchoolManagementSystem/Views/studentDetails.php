@@ -183,21 +183,21 @@
                         <tbody>
                           <tr>
                             <td>English Language</td>
-                            <td><input type="number" class="form-control"></td>
-                            <td><input type="number" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input type="number" name="classScoreForEnglish" class="form-control"></td>
+                            <td><input type="number" name="examScoreForEnglish" class="form-control"></td>
+                            <td><input type="text" name="remarksForEnglish" class="form-control"></td>
                           </tr>
                           <tr>
                             <td>Mathematics</td>
-                            <td><input type="number" class="form-control"></td>
-                            <td><input type="number" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input type="number" name="classScoreForMaths" class="form-control"></td>
+                            <td><input type="number" name="examScoreForMaths" class="form-control"></td>
+                            <td><input type="text" name="remarksForMaths" class="form-control"></td>
                           </tr>
                           <tr>
                             <td>Social Studies</td>
-                            <td><input type="number" class="form-control"></td>
-                            <td><input type="number" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input type="number" name="classScoreForSocial" class="form-control"></td>
+                            <td><input type="number" name="examScoreForSocial" class="form-control"></td>
+                            <td><input type="text" name="remarksForSocial" class="form-control"></td>
                           </tr>
                           <tr>
                             <td>Integrated Science</td>
@@ -207,9 +207,9 @@
                           </tr>
                           <tr>
                             <td>Others</td>
-                            <td><input type="number" class="form-control"></td>
-                            <td><input type="number" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input type="number" name="classScoreForScience" class="form-control"></td>
+                            <td><input type="number" name="examScoreForScience" class="form-control"></td>
+                            <td><input type="text" name="remarksForSocial" class="form-control"></td>
                           </tr>
                         </tbody>
                       </table>
@@ -282,7 +282,28 @@
                   <th>Position In Class</th>
                 </tr>
               </thead>
-          
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <ul class="list-group">
+                      <li class="list-group-item">English:</li>
+                      <li class="list-group-item">Mathematics:</li>
+                      <li class="list-group-item">Science:</li>
+                      <li class="list-group-item">Social:</li>
+                      <li class="list-group-item">Others:</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
