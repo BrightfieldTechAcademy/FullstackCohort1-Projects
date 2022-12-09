@@ -18,7 +18,7 @@ if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
         $studentFees->term = htmlspecialchars($_POST['term']);
         $studentFees->dateOfPayment = htmlspecialchars($_POST['dateOfPayment']);
         
-        $admin->addstudentFees($studentFees);
+        $admin->addStudentFees($studentFees);
     }
     $template = new Template("Views/studentFees.php");
     echo $template;
