@@ -75,7 +75,7 @@
                         <div class="col">
                             <div class="card  my-3 py-4">
                                 <div class="card-body">
-                                  <h5 class="card-title fs-3 py-3 fw-bolder">Add Student</h5>
+                                  <h5 class="card-title fs-5 py-3 fw-bolder">Add Student</h5>
                                   <i class="bi bi-universal-access bg-white text-dark rounded-circle px-1 py-1"></i>
                                   <a href="<?php echo BASE_URL?>/addStudent.php" class="btn ms-2 border border-light rounded-pill text-white">Click Me</a>
                                 </div>
@@ -84,7 +84,7 @@
                         <div class="col">
                             <div class="card my-3 py-4">
                                 <div class="card-body">
-                                  <h5 class="card-title fs-3 py-3 fw-bolder">Expense(Today)</h5>
+                                  <h5 class="card-title fs-5 py-3 fw-bolder">Expense(Today)</h5>
                                   <i class="bi bi-universal-access bg-white text-dark rounded-circle px-1 py-1"></i>
                                   <a href="#" class="btn border ms-2 border-light rounded-pill text-white">Click Me</a>
                                 </div>
@@ -93,7 +93,7 @@
                         <div class="col">
                             <div class="card my-3 py-4">
                                 <div class="card-body">
-                                  <h5 class="card-title fs-3 py-3 fw-bolder">Unpaid Student Invoice</h5>
+                                  <h5 class="card-title fs-5 py-3 fw-bolder">Unpaid Student Invoice</h5>
                                   <i class="bi bi-universal-access bg-white text-dark rounded-circle px-1 py-1"></i>
                                   <a href="#" class="btn ms-2 border border-light rounded-pill text-white btn-sm">Click Me</a>
                                 </div>
@@ -114,7 +114,7 @@
                         <div class="col">
                             <div class="card my-3 py-4">
                                 <div class="card-body">
-                                  <h5 class="card-title fs-3 py-3 fw-bolder">Income(Today)</h5>
+                                  <h5 class="card-title fs-5 py-3 fw-bolder">Income(Today)</h5>
                                   <i class="bi bi-universal-access bg-white text-dark rounded-circle px-1 py-1"></i>
                                   <a href="#" class="btn ms-2 border border-light rounded-pill text-white">Click Me</a>
                                 </div>
@@ -123,7 +123,7 @@
                         <div class="col">
                             <div class="card my-3 py-4">
                                 <div class="card-body">
-                                  <h5 class="card-title fs-3 py-3 fw-bolder">Expense Today</h5>
+                                  <h5 class="card-title fs-5 py-3 fw-bolder">Expense Today</h5>
                                   <i class="bi bi-universal-access bg-white text-dark rounded-circle px-1 py-1"></i>
                                   <a href="#" class="btn ms-2 border border-light rounded-pill text-white">Click Me</a>
                                 </div>
@@ -135,7 +135,7 @@
                         <div class="col">
                             <div class="card my-3 py-4">
                                 <div class="card-body">
-                                  <h5 class="card-title fs-3 py-3 fw-bolder">Todays Balance Sheet</h5>
+                                  <h5 class="card-title fs-5 py-3 fw-bolder">Todays Balance Sheet</h5>
                                   <i class="bi bi-universal-access bg-white text-dark rounded-circle px-1 py-1"></i>
                                   <a href="#" class="btn ms-2 text-white border border-light rounded-pill">Click Me</a>
                                 </div>
@@ -144,7 +144,7 @@
                         <div class="col">
                             <div class="card my-3 py-4">
                                 <div class="card-body">
-                                  <h5 class="card-title fs-3 py-3 fw-bolder">Current Teachers Data</h5>
+                                  <h5 class="card-title fs-5 py-3 fw-bolder">Current Teachers Data</h5>
                                   <i class="bi bi-universal-access bg-white text-dark rounded-circle px-1 py-1"></i>
                                   <a href="#" class="btn ms-2 border border-light rounded-pill text-white">Click Me</a>
                                 </div>
@@ -153,7 +153,7 @@
                         <div class="col">
                             <div class="card my-3 py-4">
                                 <div class="card-body">
-                                  <h5 class="card-title fs-3 py-3 fw-bolder">Student Admission Form</h5>
+                                  <h5 class="card-title fs-5 py-3 fw-bolder">Student Admission Form</h5>
                                   <i class="bi bi-universal-access bg-white text-dark rounded-circle px-1 py-1"></i>
                                   <a href="#" class="btn ms-2 border border-light rounded-pill text-white">Click Me</a>
                                 </div>
@@ -165,7 +165,7 @@
 
                 <!-- search -->
                 <div class="container search">
-                    <table id="example" class="table table-striped fs-3 table-bordered nowrap" style="width:100%">
+                    <table id="example" class="table table-striped table-bordered nowrap" style="width:100%">
                         <thead>
                             <tr>
                                 <th>Profile Picture</th>
@@ -202,7 +202,7 @@
                         <div class="col">
                             <div class="card">
                                 <div class="card-body">
-                                  <h5 class="card-title fs-2">Headmaster's Report</h5>
+                                  <h5 class="card-title fs-4">Headmaster's Report</h5>
                                   <p>Daily Information about invoices in the system between ........</p>
                                 </div>
                             </div>
@@ -210,7 +210,7 @@
                         <div class="col">
                             <div class="card">
                                 <div class="card-body">
-                                  <h5 class="card-title fs-2">Spend Statistics and Overall Income </h5>
+                                  <h5 class="card-title fs-4">Spend Statistics and Overall Income </h5>
                                   <p class="text-success fw-bolder">Overall Income</p>
                                   <p>$123....</p>
                                   <p class="fw-boder text-danger">Totall Expenses</p>

@@ -264,47 +264,32 @@
         </div>
 
         <!-- Terminal Report -->
-        <div class="container mt-5 text-center">
-          <h2 class="fw-bolder py-2">Terminal Report</h2>
+        <div class="container mt-5">
+          <h2 class="fw-bolder py-2 text-center">Terminal Report</h2>
           <div class="table-responsive container">
-            <table class="table table-striped table-bordered nowrap container" style="width:100%">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Class</th>
-                  <th>Gender</th>
-                  <th>Subjects</th>
-                  <th>Total Score</th>
-                  <th>Average Score (%)</th>
-                  <th>Grade</th>
-                  <th>Term</th>
-                  <th>No. on roll</th>
-                  <th>Position In Class</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>
-                    <ul class="list-group">
-                      <li class="list-group-item">English:</li>
-                      <li class="list-group-item">Mathematics:</li>
-                      <li class="list-group-item">Science:</li>
-                      <li class="list-group-item">Social:</li>
-                      <li class="list-group-item">Others:</li>
-                    </ul>
-                  </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="container search">
+              <table id="example1" class="table table-striped table-bordered nowrap" style="width:100%">
+                <thead>
+                  <tr>
+                    <th>Subjects</th>
+                    <th>Class Score (%)</th>
+                    <th>Exam Score (%)</th>
+                    <th>Remarks</th>
+                    <th>Position</th>
+                    <th>Grade</th>
+                  </tr>
+                </thead>
+                
+              </table>
+            </div>
+          </div>
+          <div class="container mt-4 mb-2 w-25">
+              <ul class="list-group">
+                <li class="list-group-item">Total Score: <strong>1800</strong></li>
+                <li class="list-group-item">Average Score: <strong>1800</strong></li>
+                <li class="list-group-item">Position In Class: <strong>5th</strong></li>
+                <li class="list-group-item">Grade: <strong>7</strong></li>
+              </ul>
           </div>
         </div>
       </div>
@@ -335,7 +320,7 @@
     <!-- bills payment -->
 
     <!-- Fee Payment -->
-  <div class="container p-4" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
+  <div class="container p-4 my-4" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
 
     <div class="accordion m-3" id="accordionExample">
       <div class="accordion-item">
@@ -452,6 +437,17 @@
        <script src="https://cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js"></script>
        <script src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
        <script src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap.min.js"></script>
+       <script>
+             $(document).ready(function() {
+                 var table = $('#example1').DataTable( {
+                     responsive: true
+                 } );
+             
+                 new $.fn.dataTable.FixedHeader( table );
+             });        
+         </script>
+         
+         
          <script>
              $(document).ready(function() {
                  var table = $('#example').DataTable( {
