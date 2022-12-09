@@ -20,7 +20,7 @@ if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
         
         $admin->addStudentFees($studentFees);
     }
-    $template = new Template("Views/studentFees.php");
+    $template = new Template("Views/studentDetails.php");
     echo $template;
 
 }else{
