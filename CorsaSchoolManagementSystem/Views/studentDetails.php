@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://bootswatch.com/5/cosmo/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,700;1,100;1,300;1,500&display=swap" rel="stylesheet">
-    
+
     <!-- datatables css -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.bootstrap.min.css">
-    
+
     <style>
       body {
         font-family: 'Poppins', sans-serif;
@@ -27,10 +27,10 @@
       <a href="<?php echo BASE_URL?>/dashboard.php" class="btn btn-primary py-2 px-3 me-auto">
         <span class="material-icons">
             arrow_back
-        </span> 
+        </span>
       </a>
       <a class="navbar-brand m-auto" href="#">
-        <img src="<?php echo BASE_URL?>/Views/image/logo.jpg" class="thumbmail img-fluid" alt="" style="width: 80px; height: 60px;">  
+        <img src="<?php echo BASE_URL?>/Views/image/logo.jpg" class="thumbmail img-fluid" alt="" style="width: 80px; height: 60px;">
       </a>
     </div>
   </nav>
@@ -43,7 +43,7 @@
           <div class="row mt-3">
             <!-- Grid column -->
             <div class="col-xm-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
-              <!-- Content -->                        
+              <!-- Content -->
               <div id="vectorForProfile">
                 <center>
                   <img src="<?php echo BASE_URL. "/". $studentDetails->picture?>" alt="" class="img-fluid img-thumbnail">
@@ -54,8 +54,8 @@
                 <h4 class="text-uppercase fw-bold mt-4">
                   <i class="fas fa-gem me-3"></i><?php echo $studentDetails->firstname . ' ' . $studentDetails->middlename . ' '.  $studentDetails->lastname; ?>
                     <small class="mute">STUDENT</small>
-                </h4>    
-              </center> 
+                </h4>
+              </center>
             </div>
             <!-- Grid column -->
             <div class=" col-xm-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
@@ -65,7 +65,7 @@
                 <h6 class="text-uppercase fw-bold mb-4">
                   Basic Information
                 </h6>
-              </center> 
+              </center>
                 <hr>
                 <p class="my-2"><strong>First Name:</strong> <?php echo $studentDetails->firstname?> </p>
                 <p><strong>Middle Name:</strong> <?php echo $studentDetails->middlename?> </p>
@@ -94,8 +94,8 @@
           <!-- Grid row -->
         </div>
       </section>
-    <!-- Section: Links  -->           
-    </section>       
+    <!-- Section: Links  -->
+    </section>
   </div>
 
   <div class="container my-5 py-5" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
@@ -124,7 +124,7 @@
             <ul style="list-style: none;" class="pt-3">
                 <li class="my-2"> <strong>EMERGENCY CONTACT NUMBER : </strong><?php echo $studentDetails->emergencyContactNumber?> </li>
                 <li class="my-2"> <strong>PERSONAL DOCTOR'S NUMBER : </strong><?php echo $studentDetails->personalDoctorNumber?> </li>
-                <li class="my-2"> <strong>MEDICAL FITNESS NOTE : </strong> <?php echo $studentDetails->medicalFitnessNote?></li>  
+                <li class="my-2"> <strong>MEDICAL FITNESS NOTE : </strong> <?php echo $studentDetails->medicalFitnessNote?></li>
             </ul>
           </div>
 
@@ -135,7 +135,7 @@
                 <li class="my-2"> <strong>UNPREFERED DIET : </strong> <?php echo $studentDetails->unpreferedDiet?> </li>
             </ul>
           </div>
-        </div>  
+        </div>
       </div>
 
       <div class="tab-pane fade" id="academicInformation" role="tabpanel" aria-labelledby="academicInformation-tab">
@@ -249,7 +249,7 @@
                         <input type="text" name="position" class="form-control">
                       </div>
                     </div>
-                   
+
                     <div class="container mt-3 mb-2">
                       <input type="submit" name="addResults" class="form-control btn btn-sm btn-primary fw-bold py-2">
                     </div>
@@ -279,7 +279,7 @@
                     <th>Grade</th>
                   </tr>
                 </thead>
-                
+
               </table>
             </div>
           </div>
@@ -298,24 +298,24 @@
         <div class="row">
             <div class="col-4">
                 <ul style="list-style: none;" >
-                    <li class="my-2"> <strong>FATHER'S NAME : </strong> <?php echo $studentDetails->fathersName?>  </li>  
-                    <li class="my-2"> <strong>TEL. NUMBER : </strong> <?php echo $studentDetails->fathersTelephone?>  </li>  
-                    <li class="my-2"> <strong>OCCUPATION : </strong> <?php echo $studentDetails->fathersOccupation?></li>  
-                    <li class="my-2"> <strong>HOMETOWN : </strong> <?php echo $studentDetails->fathersHometown?> </li>  
+                    <li class="my-2"> <strong>FATHER'S NAME : </strong> <?php echo $studentDetails->fathersName?>  </li>
+                    <li class="my-2"> <strong>TEL. NUMBER : </strong> <?php echo $studentDetails->fathersTelephone?>  </li>
+                    <li class="my-2"> <strong>OCCUPATION : </strong> <?php echo $studentDetails->fathersOccupation?></li>
+                    <li class="my-2"> <strong>HOMETOWN : </strong> <?php echo $studentDetails->fathersHometown?> </li>
                 </ul>
             </div>
             <div class="col-4">
                 <ul style="list-style: none;" >
-                    <li class="my-2"> <strong>MOTHER'S NAME : </strong> <?php echo $studentDetails->mothersName?> </li>  
-                    <li class="my-2"> <strong>TEL. NUMBER : </strong>  <?php echo $studentDetails->mothersTelephone?></li>  
-                    <li class="my-2"> <strong>OCCUPATION : </strong> <?php echo $studentDetails->mothersOccupation?></li>  
-                    <li class="my-2"> <strong>HOMETOWN : </strong> <?php echo $studentDetails->mothersHometown?></li>  
+                    <li class="my-2"> <strong>MOTHER'S NAME : </strong> <?php echo $studentDetails->mothersName?> </li>
+                    <li class="my-2"> <strong>TEL. NUMBER : </strong>  <?php echo $studentDetails->mothersTelephone?></li>
+                    <li class="my-2"> <strong>OCCUPATION : </strong> <?php echo $studentDetails->mothersOccupation?></li>
+                    <li class="my-2"> <strong>HOMETOWN : </strong> <?php echo $studentDetails->mothersHometown?></li>
                 </ul>
             </div>
         </div>
       </div>
     </div>
-    
+
   </div>
     <!-- bills payment -->
 
@@ -334,43 +334,29 @@
           <div class="container">
               <form action="" method="post">
                 <div class="container my-3">
-                  <label class="fw-bold py-2">Full Name</label>
-                  <input type="text" name="fullname" class="form-control">
+                  <label class="fw-bold py-2">Term Fees</label>
+                  <input type="text" name="termFees" class="form-control">
                 </div>
-                <div class="container my-3">
-                  <label class="fw-bold py-2">Gender</label>
-                  <input type="text" name="gender" class="form-control">
-                </div>
-                <div class="container my-3">
-                  <label class="fw-bold py-2">Class</label>
-                  <input type="text" name="class" class="form-control">
-                </div>
-                <div class="container my-3">
-                  <label class="fw-bold py-2">Fee To Pay</label>
-                  <input type="text" name="fee" class="form-control">
-                </div>
+
                 <div class="container my-3">
                   <label class="fw-bold py-2">Amount Paid</label>
-                  <input type="text" name="feePaid" class="form-control">
-                </div>
-                <div class="container my-3">
-                  <label class="fw-bold py-2">Amount  Left To Be Paid</label>
-                  <input type="text" name="feeLeft" class="form-control">
+                  <input type="text" name="amountPaid" class="form-control">
                 </div>
                 <div class="container my-3">
                   <label class="fw-bold py-2">Term</label>
                   <input type="text" name="term" class="form-control">
                 </div>
                 <div class="container my-3">
+                  <label class="fw-bold py-2">Academic Year</label>
+                  <input type="text" name="academicYear" class="form-control">
+                </div>
+                <div class="container my-3">
                   <label class="fw-bold py-2">Date of Payment</label>
                   <input type="text" name="dateOfPayment" class="form-control">
                 </div>
-                <div class="container my-3">
-                  <label class="fw-bold py-2">Status</label>
-                  <input type="text" name="status" class="form-control">
-                </div>
+
                 <div class="container mt-3 mb-2">
-                  <input type="submit" name="payFee" class="form-control btn btn-sm btn-primary fw-bold py-2">
+                  <input type="submit" name="payFees" class="form-control btn btn-sm btn-primary fw-bold py-2">
                 </div>
               </form>
             </div>
@@ -378,51 +364,22 @@
         </div>
       </div>
     </div>
-   
+
     <!-- Payment Report -->
     <div class="container mt-3 text-center">
       <h2 class="fw-bolder py-2">Payment Report</h2>
-      <!-- <div class="table-responsive container">
-        <table class="table table-primary table-striped">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Class</th>
-              <th>Fee Paid</th>
-              <th>Status</th>
-              <th>Fee To Pay</th>
-              <th>Amount Left To Be Paid</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Richmond Andoh</td>
-              <td>Grade  6</td>
-              <td>$ 500</td>
-              <td>Paying</td>
-              <td>$ 1000</td>
-              <td>$ 500</td>
-            </tr>
-          </tbody>
-        </table>
-      </div> -->
-
       <div class="container search">
         <table id="example" class="table table-striped table-bordered nowrap" style="width:100%">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Class</th>
-              <th>Gender</th>
-              <th>Fee To Pay</th>
-              <th>Amount Paid</th>
-              <th>Amount Left To Be Paid</th>
-              <th>Status</th>
-              <th>Term Paid</th>
+              <th>Term Fees</th>
+              <th>Aount Paid<th>
+              <th>Term</th>
+              <th>Academic Year</th>
               <th>Date of Payment</th>
             </tr>
           </thead>
-          
+
         </table>
       </div>
     </div>
@@ -433,7 +390,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
       <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
       <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
- 
+
        <script src="https://cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js"></script>
        <script src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
        <script src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap.min.js"></script>
@@ -442,20 +399,20 @@
                  var table = $('#example1').DataTable( {
                      responsive: true
                  } );
-             
+
                  new $.fn.dataTable.FixedHeader( table );
-             });        
+             });
          </script>
-         
-         
+
+
          <script>
              $(document).ready(function() {
                  var table = $('#example').DataTable( {
                      responsive: true
                  } );
-             
+
                  new $.fn.dataTable.FixedHeader( table );
-             });        
+             });
          </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,0 +1,14 @@
+<?php
+ require_once("Core/init.php");
+
+ class StudentFees 
+ {
+  public int $studentId;
+  public string $termFees;
+  public string $amountPaid;
+  public string $term;
+  public string $academicYear;
+  public string $dateOfPayment;
+};
+
+
