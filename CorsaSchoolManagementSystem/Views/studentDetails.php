@@ -352,7 +352,7 @@
                 </div>
                 <div class="container my-3">
                   <label class="fw-bold py-2">Date of Payment</label>
-                  <input type="text" name="dateOfPayment" class="form-control">
+                  <input type="date" name="dateOfPayment" class="form-control">
                 </div>
 
                 <div class="container mt-3 mb-2">
