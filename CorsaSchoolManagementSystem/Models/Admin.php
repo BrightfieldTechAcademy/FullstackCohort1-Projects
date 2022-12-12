@@ -145,5 +145,34 @@ class Admin extends User
         $this->db->bind(":guardiansResidence", $studentParentData->guardiansResidence);
         $this->db->bind(":guardiansContact", $studentParentData->guardiansContact);
         $this->db->execute();
-    }
-}
+    };
+  
+    public function addStudentFees(StudentFees $studentFees) {
+        //student Fees
+
+        $sql = "INSERT INTO StudentsFees(
+            studentId,
+            termFees,
+            amountPaid,
+            term,
+            academicYear,
+            dateOfPayment
+        ) VALUES (
+            :studentId,
+            :termFees,
+            :amountPaid,
+            :term,
+            :academicYear,
+            :dateOfPayment
+        );";
+
+        $this->db->query($sql);
+        $this->db->bind("studentId", $studentFees->studentId);
+        $this->db->bind("termFees", $studentFees->termFees);
+        $this->db->bind("amountPaid", $studentFees->amountPaid);
+        $this->db->bind("term", $studentFees->term);
+        $this->db->bind("academicYear", $studentFees->academicYear);
+        $this->db->bind("dateOfPayment", $studentFees->dateOfPayment);
+    };
+  
+};
