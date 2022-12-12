@@ -69,7 +69,7 @@
                 <hr>
                 <p class="my-2"><strong>First Name:</strong> <?php echo $studentDetails->firstname?> </p>
                 <p><strong>Middle Name:</strong> <?php echo $studentDetails->middlename?> </p>
-                <p><strong>Last Name Name:</strong> <?php echo $studentDetails->lastname?> </p>
+                <p><strong>Last Name:</strong> <?php echo $studentDetails->lastname?> </p>
                 <p><strong>Gender: </strong> <?php echo $studentDetails->gender?> </p>
                 <p><strong>Date of Birth:</strong>  <?php echo date("jS F, Y", strtotime($studentDetails->dateOfBirth))?> </p>
                 <p><strong>Religion:</strong>  <?php echo $studentDetails->religion?> </p>
