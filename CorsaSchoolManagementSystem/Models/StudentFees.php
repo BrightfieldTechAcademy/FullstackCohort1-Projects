@@ -3,9 +3,6 @@
 class StudentFees
 {
     public int $studentId;
-    public string $fullName;
-    public string $gender;
-    public string $class;
     public int $feeToPay;
     public int $amountPaid;
     public int $amountLeftToPaid;

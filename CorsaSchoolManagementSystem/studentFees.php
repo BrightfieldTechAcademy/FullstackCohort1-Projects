@@ -9,9 +9,6 @@ if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
         $studentFees = new StudentFees();
 
         $studentFees->studentId = $studentId;
-        $studentFees->fullName = htmlspecialchars($_POST['fullName']);
-        $studentFees->gender = htmlspecialchars($_POST['gender']);
-        $studentFees->class = htmlspecialchars($_POST['class']);
         $studentFees->feeToPay = htmlspecialchars($_POST['feeToPay']);
         $studentFees->amountPaid = htmlspecialchars($_POST['amountPaid']);
         $studentFees->amountLeftToPaid = htmlspecialchars($_POST['amountLeftToPaid']);
