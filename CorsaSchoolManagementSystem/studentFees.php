@@ -3,22 +3,24 @@
 require('Core/init.php');
 
 if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
-    if($_POST['payFees']){
-        //student fees
+    if(isset($_POST['payFees'])){
+        $studentUuid = htmlspecialchars($_POST['studentUuid']);
+
         $admin = new Admin(new Database());
         $studentFees = new StudentFees();
-
-        $studentFees->studentId = $studentId;
-        $studentFees->feeToPay = htmlspecialchars($_POST['feeToPay']);
+        $studentFees->studentId = htmlspecialchars($_POST['studentId']);
+        $studentFees->termFees = htmlspecialchars($_POST['termFees']);
         $studentFees->amountPaid = htmlspecialchars($_POST['amountPaid']);
-        $studentFees->amountLeftToPaid = htmlspecialchars($_POST['amountLeftToPaid']);
         $studentFees->term = htmlspecialchars($_POST['term']);
+        $studentFees->academicYear = htmlspecialchars($_POST['academicYear']);
         $studentFees->dateOfPayment = htmlspecialchars($_POST['dateOfPayment']);
         
-        $admin->addStudentFees($studentFees);
+        if($admin->addStudentFees($studentFees)){
+            header("Location: ". BASE_URL . "/studentDetails.php?studentId=". $studentUuid);
+        };
+    }else{
+        header("Location: ". BASE_URL . "/index.php");
     }
-    $template = new Template("Views/studentDetails.php");
-    echo $template;
 
 }else{
     header("Location: ". BASE_URL . "/index.php");

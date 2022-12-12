@@ -163,12 +163,14 @@ class Admin extends User
         );";
 
         $this->db->query($sql);
-        $this->db->bind("studentId", $studentFees->studentId);
-        $this->db->bind("termFees", $studentFees->termFees);
-        $this->db->bind("amountPaid", $studentFees->amountPaid);
-        $this->db->bind("term", $studentFees->term);
-        $this->db->bind("academicYear", $studentFees->academicYear);
-        $this->db->bind("dateOfPayment", $studentFees->dateOfPayment);
+        $this->db->bind(":studentId", $studentFees->studentId);
+        $this->db->bind(":termFees", $studentFees->termFees);
+        $this->db->bind(":amountPaid", $studentFees->amountPaid);
+        $this->db->bind(":term", $studentFees->term);
+        $this->db->bind(":academicYear", $studentFees->academicYear);
+        $this->db->bind(":dateOfPayment", $studentFees->dateOfPayment);
+
+        return $this->db->execute();
     }
   
 };

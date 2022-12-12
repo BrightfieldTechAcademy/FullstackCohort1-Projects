@@ -3,9 +3,9 @@
 class StudentFees
 {
     public int $studentId;
-    public int $feeToPay;
+    public int $termFees;
     public int $amountPaid;
-    public int $amountLeftToPaid;
     public string $term;
-    public int $dateOfPayment;
+    public string $academicYear;
+    public string $dateOfPayment;
 }

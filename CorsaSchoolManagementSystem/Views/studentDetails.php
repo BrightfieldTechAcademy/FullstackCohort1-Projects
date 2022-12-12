@@ -334,6 +334,12 @@
           <div class="container">
               <form action="<?php echo BASE_URL .'/studentFees.php'?>" method="post">
                 <div class="container my-3">
+                  <input type="hidden" name="studentId" class="form-control" value="<?php echo $studentDetails->studentId?>">
+                </div>  
+                <div class="container my-3">
+                  <input type="hidden" name="studentUuid" class="form-control" value="<?php echo $studentDetails->uuid?>">
+                </div>  
+                <div class="container my-3">
                   <label class="fw-bold py-2">Term Fees</label>
                   <input type="text" name="termFees" class="form-control">
                 </div>

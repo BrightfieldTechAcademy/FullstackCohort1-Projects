@@ -59,8 +59,7 @@ class Database
         try {
            return $this->stmt->execute();
         } catch (PDOException $e) {
-            echo "Execution failed: ". '<br> Trace: '. $e->getTraceAsString .'Line: ' .$e->getLine. '<br> Message: '.  $e->getMessage();
-
+          echo "Execution failed: " . $e->getMessage();
         }
     }
 
