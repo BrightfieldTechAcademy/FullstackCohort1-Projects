@@ -332,7 +332,7 @@
         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
           <div class="accordion-body">
           <div class="container">
-              <form action="" method="post">
+              <form action="<?php echo BASE_URL .'/studentFees.php'?>" method="post">
                 <div class="container my-3">
                   <label class="fw-bold py-2">Term Fees</label>
                   <input type="text" name="termFees" class="form-control">
