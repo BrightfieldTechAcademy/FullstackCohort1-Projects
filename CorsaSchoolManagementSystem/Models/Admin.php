@@ -98,8 +98,6 @@ class Admin extends User
 
 
     public function addStudentParentData(StudentParentData $studentParentData) {
-
-        //Parents Info
        $sql = "INSERT INTO ParentsInfo(
         studentId,
         fathersName,
@@ -145,11 +143,9 @@ class Admin extends User
         $this->db->bind(":guardiansResidence", $studentParentData->guardiansResidence);
         $this->db->bind(":guardiansContact", $studentParentData->guardiansContact);
         $this->db->execute();
-    };
+    }
   
     public function addStudentFees(StudentFees $studentFees) {
-        //student Fees
-
         $sql = "INSERT INTO StudentsFees(
             studentId,
             termFees,
@@ -173,6 +169,6 @@ class Admin extends User
         $this->db->bind("term", $studentFees->term);
         $this->db->bind("academicYear", $studentFees->academicYear);
         $this->db->bind("dateOfPayment", $studentFees->dateOfPayment);
-    };
+    }
   
 };
