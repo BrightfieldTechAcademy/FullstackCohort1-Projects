@@ -374,18 +374,28 @@
     <!-- Payment Report -->
     <div class="container mt-3 text-center">
       <h2 class="fw-bolder py-2">Payment Report</h2>
-      <div class="container search">
-        <table id="example" class="table table-striped table-bordered nowrap" style="width:100%">
+      <div class="container table-responsive">
+        <table class="table table-striped table-primary" style="width: 100%;">
           <thead>
             <tr>
               <th>Term Fees</th>
-              <th>Aount Paid<th>
+              <th>Amount Paid</th>
               <th>Term</th>
               <th>Academic Year</th>
               <th>Date of Payment</th>
             </tr>
           </thead>
-
+          <tbody>
+            <?php foreach ($studentFees as $each): ?>
+              <tr>
+                 <td><?php echo $each->termFees?></td>
+                 <td><?php echo $each->amountPaid ?></td>
+                 <td><?php echo $each->term ?></td>
+                 <td><?php echo $each->academicYear ?></td>
+                 <td><?php echo $each->dateOfPayment ?></td>
+              </tr>
+              <?php endforeach; ?>
+          </tbody>
         </table>
       </div>
     </div>
@@ -411,7 +421,7 @@
          </script>
 
 
-         <script>
+         <!-- <script>
              $(document).ready(function() {
                  var table = $('#example').DataTable( {
                      responsive: true
@@ -419,7 +429,7 @@
 
                  new $.fn.dataTable.FixedHeader( table );
              });
-         </script>
+         </script> -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
