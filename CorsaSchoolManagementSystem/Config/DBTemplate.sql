@@ -67,7 +67,6 @@ CREATE TABLE ParentsInfo(
 CREATE TABLE StudentsFees(
     id int NOT NULL AUTO_INCREMENT,
     studentId int,
-    uuid VARCHAR(255) UNIQUE;
     termFees  varchar(255) NOT NULL,
     amountPaid  varchar(255) NOT NULL,
     term varchar(255) NOT NULL,
