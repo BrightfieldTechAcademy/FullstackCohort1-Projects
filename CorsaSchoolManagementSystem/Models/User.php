@@ -31,4 +31,10 @@ class User{
         $this->db->bind(":uuid", $id);
         return $this->db->single();
     }
+
+    public function getStudentFees (string $id)
+    {
+        $this->db->query("SELECT * from StudentsFees");
+        return $this->db->resultSet();
+    }
 }
