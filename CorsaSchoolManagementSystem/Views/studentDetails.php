@@ -383,6 +383,7 @@
               <th>Term</th>
               <th>Academic Year</th>
               <th>Date of Payment</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -393,6 +394,11 @@
                  <td><?php echo $each->term ?></td>
                  <td><?php echo $each->academicYear ?></td>
                  <td><?php echo $each->dateOfPayment ?></td>
+                 <?php if($each->isStudentOwing): ?>
+                    <?php echo "owing" ?>
+                  <?php else: ?>
+                    <?php echo "not owing" ?>
+                  <?php endif;?>
               </tr>
               <?php endforeach; ?>
           </tbody>

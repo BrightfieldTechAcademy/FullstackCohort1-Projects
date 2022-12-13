@@ -34,7 +34,9 @@ class User{
 
     public function getStudentFees (string $id)
     {
-        $this->db->query("SELECT * from StudentsFees");
+        $this->db->query("SELECT * from StudentsFees Where studentId = :id");
+        $this->db->bind(":id", $id);
+
         return $this->db->resultSet();
     }
 }
