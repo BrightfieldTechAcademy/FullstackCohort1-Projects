@@ -75,6 +75,19 @@ CREATE TABLE StudentsFees(
     PRIMARY KEY (id),
     FOREIGN KEY (studentId) references StudentsInfo(id)
 );
+CREATE TABLE StudentsAcademicInfo(
+    id int NOT NULL AUTO_INCREMENT,
+    studentId int,
+    subjects  varchar(255) NOT NULL,
+    classScore  varchar(255) NOT NULL,
+    ExamScore varchar(255) NOT NULL,
+    remarks varchar(255) NOT NULL,
+    position  varchar(255) NOT NULL,
+    grade varchar(255) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (studentId) references StudentsInfo(id)
+);
+
 
 
 
