@@ -2,7 +2,7 @@
 
 require('Core/init.php');
 
-if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
+if($_SESSION['loggedIn'] && $_SESSION['role'] === Roles::ADMIN){
     if(isset($_POST['payFees'])){
         $studentUuid = htmlspecialchars($_POST['studentUuid']);
 

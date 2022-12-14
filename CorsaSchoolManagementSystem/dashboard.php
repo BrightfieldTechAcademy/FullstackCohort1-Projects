@@ -1,7 +1,6 @@
 <?php 
 
 require('Core/init.php');
-
 if($_SESSION['loggedIn']){
     $users = new User(new Database());
     $template = new Template("Views/dashboard.php");
