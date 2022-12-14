@@ -75,6 +75,7 @@ CREATE TABLE StudentsFees(
     PRIMARY KEY (id),
     FOREIGN KEY (studentId) references StudentsInfo(id)
 );
+
 CREATE TABLE StudentsAcademicInfo(
     id int NOT NULL AUTO_INCREMENT,
     studentId int,
