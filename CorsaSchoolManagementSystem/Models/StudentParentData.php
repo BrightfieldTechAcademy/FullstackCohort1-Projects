@@ -1,7 +1,5 @@
 <?php 
 
-require_once("Core/init.php");
-
 class StudentParentData
 {
     public int $studentId;
