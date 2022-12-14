@@ -69,7 +69,6 @@ class Admin extends User
         //Health Info
         $sql = "INSERT INTO StudentHealthsInfo (
             studentId,
-            uuid,
             emergencyContactNumber,
             personalDoctorNumber,
             medicalFitnessNote,
@@ -78,7 +77,6 @@ class Admin extends User
             unpreferedDiet
         ) VALUES(
             :studentId,
-            :uuid,
             :emergencyContactNumber,
             :personalDoctorNumber,
             :medicalFitnessNote,
