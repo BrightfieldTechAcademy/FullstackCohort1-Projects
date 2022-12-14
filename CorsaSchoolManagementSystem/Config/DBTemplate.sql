@@ -79,11 +79,12 @@ CREATE TABLE StudentsAcademicInfo(
     id int NOT NULL AUTO_INCREMENT,
     studentId int,
     subjects  varchar(255) NOT NULL,
-    classScore  varchar(255) NOT NULL,
-    ExamScore varchar(255) NOT NULL,
-    remarks varchar(255) NOT NULL,
+    term varchar(255) NOT NULL,
+    academicYear varchar(255) NOT NULL,
     position  varchar(255) NOT NULL,
-    grade varchar(255) NOT NULL,
+    remarks varchar(255) NOT NULL,
+    numberOfEnrollments int(6) NOT NULL,
+    aggregate varchar(255) NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (studentId) references StudentsInfo(id)
 );
