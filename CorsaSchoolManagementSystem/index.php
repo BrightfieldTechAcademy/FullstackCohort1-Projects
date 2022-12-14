@@ -18,7 +18,7 @@ if(isset($_SESSION['loggedIn'])){
             if($data){
                 if(password_verify($password, $data->password)){
                     $_SESSION['loggedIn'] = true;
-                    $_SESSION['userType'] = UserType::ADMIN;
+                    $_SESSION['role'] = $data->role;
                     header("Location: ". BASE_URL . "/dashboard.php");
                 }else{
                     die("The <b>Password</b> provided does not exist");

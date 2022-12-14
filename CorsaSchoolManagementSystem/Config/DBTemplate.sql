@@ -6,6 +6,7 @@ CREATE TABLE Users (
     name varchar(255) NOT NULL,
     email varchar(255) NOT NULL,
     password varchar(255) NOT NULL,
+    role varchar(255) NOT NULL,
     CONSTRAINT UC_User UNIQUE (email),
     PRIMARY KEY (id)
 );
@@ -27,6 +28,7 @@ CREATE TABLE StudentsInfo (
     formerSchool VARCHAR(255),
     previousClass VARCHAR(255) ,
     classAdmitted  VARCHAR(255) NOT NULL,
+    currentClass VARCHAR(255) NOT NULL,
     yearOfAdmission  VARCHAR(255) NOT NULL,
     picture VARCHAR(255) NOT NULL
 );
@@ -80,6 +82,7 @@ CREATE TABLE StudentsAcademicInfo(
     id int NOT NULL AUTO_INCREMENT,
     studentId int,
     subjects  varchar(255) NOT NULL,
+    class varchar(255) NOT NULL,
     term varchar(255) NOT NULL,
     academicYear varchar(255) NOT NULL,
     position  varchar(255) NOT NULL,

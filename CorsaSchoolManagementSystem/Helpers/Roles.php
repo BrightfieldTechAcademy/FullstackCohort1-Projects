@@ -1,6 +1,7 @@
 <?php 
 
-class UserType {
+class Roles 
+{
     const ADMIN = "admin";
     const TEACHER = 'teacher';
 };

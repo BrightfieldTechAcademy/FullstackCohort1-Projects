@@ -8,7 +8,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 require_once('Config/Config.php');
-require_once('Helpers/UserType.php');
+require_once('Helpers/Roles.php');
 require_once('Helpers/helpers.php');
 
 spl_autoload_register(function ($class_name)

@@ -1,9 +1,9 @@
 <?php 
 
 require('Core/init.php');
-
-if($_SESSION['loggedIn'] && $_SESSION['userType'] === UserType::ADMIN){
-    if($_POST['addStudent']){
+var_dump($_SESSION);
+if($_SESSION['loggedIn'] && $_SESSION['role'] === Roles::ADMIN){
+    if(isset($_POST['addStudent'])){
         //student data
         $student = new StudentData();
         $admin = new Admin(new Database());

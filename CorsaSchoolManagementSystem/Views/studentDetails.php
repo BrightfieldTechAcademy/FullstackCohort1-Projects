@@ -140,35 +140,25 @@
 
       <div class="tab-pane fade" id="academicInformation" role="tabpanel" aria-labelledby="academicInformation-tab">
         <center>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14); margin-right: 15rem; margin-top: 1rem;">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#terminalReport" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14); margin-right: 15rem; margin-top: 1rem;">
             Add Results
           </button>
         </center>
 
         <!--Academic  Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="terminalReport" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="terminalReportLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
               <div class="modal-header bg-primary">
-                <h5 class="modal-title fw-bold fs-2 text-white" id="staticBackdropLabel">Terminal Report</h5>
+                <h5 class="modal-title fw-bold fs-2 text-white" id="terminalReportLabel">Terminal Report</h5>
                 <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 <div class="container">
-                  <form action="" method="post">
+                  <form action="<?php echo BASE_URL .'/addStudentTermRecords.php' ?>" method="post">
                     <div class="container my-3">
-                      <label class="fw-bold py-2">Full Name</label>
-                      <input type="text" name="fullname" class="form-control">
-                    </div>
-                    <div class="container my-3 d-flex">
-                      <div class="m-2">
-                        <label class="fw-bold py-2">Gender</label>
-                        <input type="text" name="gender" class="form-control">
-                      </div>
-                      <div class="m-2">
-                        <label class="fw-bold py-2">Class</label>
-                        <input type="text" name="class" class="form-control">
-                      </div>
+                      <label class="fw-bold py-2">Class</label>
+                      <input type="text" name="class" class="form-control" value="<?php echo $studentDetails->classAdmitted ?>">
                     </div>
                     <div class="container my-3">
                       <table class="table table-striped table-primary">
