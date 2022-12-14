@@ -172,5 +172,41 @@ class Admin extends User
 
         return $this->db->execute();
     }
-  
+
+    public function addStudentRecords(TermRecords $termRecords) {
+        $sql = "INSERT INTO StudentsAcademicInfo(
+            studentId,
+            subjects,
+            class,
+            term,
+            academicYear,
+            position,
+            remarks,
+            numberOfEnrollments,
+            aggregate
+         ) VALUES(
+            :studentId,
+            :subjects,
+            :class,
+            :term,
+            :academicYear,
+            :position,
+            :remarks,
+            :numberOfEnrollments,
+            :aggregate
+         );";
+    
+         $this->db->query($sql);
+         $this->db->bind(":studentId", $termRecords->studentId);
+         $this->db->bind(":subjects", $termRecords->subjects);
+         $this->db->bind(":class", $termRecords->class);
+         $this->db->bind(":term", $termRecords->term);
+         $this->db->bind(":academicYear", $termRecords->academicYear);
+         $this->db->bind(":position", $termRecords->position);
+         $this->db->bind(":remarks", $termRecords->remarks);
+         $this->db->bind(":numberOfEnrollments", $termRecords->numberOfEnrollments);
+         $this->db->bind(":aggregate", $termRecords->aggregate);
+
+         return $this->db->execute();
+      }
 };

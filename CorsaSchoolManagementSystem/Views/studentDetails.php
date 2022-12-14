@@ -157,78 +157,39 @@
                 <div class="container">
                   <form action="<?php echo BASE_URL .'/addStudentTermRecords.php' ?>" method="post">
                     <div class="container my-3">
+                      <input type="hidden" name="studentId" class="form-control" value="<?php echo $studentDetails->studentId?>">
+                    </div>  
+                  <div class="container my-3">
+                    <input type="hidden" name="studentUuid" class="form-control" value="<?php echo $studentDetails->uuid?>">
+                  </div> 
+                  
+                  <div class="container my-3">
                       <label class="fw-bold py-2">Class</label>
                       <input type="text" name="class" class="form-control" value="<?php echo $studentDetails->classAdmitted ?>">
                     </div>
                     <div class="container my-3">
-                      <table class="table table-striped table-primary">
-                        <thead>
-                          <tr>
-                            <th>Subjects</th>
-                            <th>Class Score (%)</th>
-                            <th>Exam Score (%)</th>
-                            <th>Remarks</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>English Language</td>
-                            <td><input type="number" name="classScoreForEnglish" class="form-control"></td>
-                            <td><input type="number" name="examScoreForEnglish" class="form-control"></td>
-                            <td><input type="text" name="remarksForEnglish" class="form-control"></td>
-                          </tr>
-                          <tr>
-                            <td>Mathematics</td>
-                            <td><input type="number" name="classScoreForMaths" class="form-control"></td>
-                            <td><input type="number" name="examScoreForMaths" class="form-control"></td>
-                            <td><input type="text" name="remarksForMaths" class="form-control"></td>
-                          </tr>
-                          <tr>
-                            <td>Social Studies</td>
-                            <td><input type="number" name="classScoreForSocial" class="form-control"></td>
-                            <td><input type="number" name="examScoreForSocial" class="form-control"></td>
-                            <td><input type="text" name="remarksForSocial" class="form-control"></td>
-                          </tr>
-                          <tr>
-                            <td>Integrated Science</td>
-                            <td><input type="number" class="form-control"></td>
-                            <td><input type="number" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                          </tr>
-                          <tr>
-                            <td>Others</td>
-                            <td><input type="number" name="classScoreForScience" class="form-control"></td>
-                            <td><input type="number" name="examScoreForScience" class="form-control"></td>
-                            <td><input type="text" name="remarksForSocial" class="form-control"></td>
-                          </tr>
-                        </tbody>
-                      </table>
+                      <div class="m-2">
+                        <label class="fw-bold py-2">Subjects</label>
+                        <input type="text" name="subjects" class="form-control">
+                      </div>
+                     
                     </div>
+                    
                     <div class="container my-3 d-flex">
                       <div class="m-2">
-                        <label class="fw-bold py-2">Total Score</label>
-                        <input type="text" name="totalScore" class="form-control">
+                        <label class="fw-bold py-2">Aggregate</label>
+                        <input type="text" name="aggregate" class="form-control">
                       </div>
                       <div class="m-2">
-                        <label class="fw-bold py-2">Average Score (%)</label>
-                        <input type="text" name="averageScore" class="form-control">
-                      </div>
-                    </div>
-                    <div class="container my-3 d-flex">
-                      <div class="m-2">
-                        <label class="fw-bold py-2">Grade</label>
-                        <input type="text" name="grade" class="form-control">
-                      </div>
-                      <div class="m-2">
-                        <label class="fw-bold py-2">No. on roll</label>
-                        <input type="text" name="roll" class="form-control">
+                        <label class="fw-bold py-2">Number Of Enrollments</label>
+                        <input type="text" name="numberOfEnrollments" class="form-control">
                       </div>
                     </div>
 
                     <div class="container my-3 d-flex">
                       <div class="m-2">
                         <label class="fw-bold py-2">Term</label>
-                        <select name="" class="form-control">
+                        <select name="term" class="form-control">
                           <option value="">First Term</option>
                           <option value="">Second Term</option>
                           <option value="">Third Term</option>
@@ -237,6 +198,16 @@
                       <div class="m-2">
                         <label class="fw-bold py-2">Position In Class</label>
                         <input type="text" name="position" class="form-control">
+                      </div>
+
+                      <div class="m-2">
+                        <label class="fw-bold py-2">Academic Year</label>
+                        <input type="text" name="academicYear" class="form-control">
+                      </div>
+
+                      <div class="m-2">
+                        <label class="fw-bold py-2">Remarks</label>
+                        <input type="text" name="remarks" class="form-control">
                       </div>
                     </div>
 
