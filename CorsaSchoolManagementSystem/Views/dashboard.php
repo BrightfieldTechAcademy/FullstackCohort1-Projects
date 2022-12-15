@@ -84,9 +84,9 @@
                         <div class="col">
                             <div class="card my-3 py-4">
                                 <div class="card-body">
-                                  <h5 class="card-title fs-5 py-3 fw-bolder">Expense(Today)</h5>
+                                  <h5 class="card-title fs-5 py-3 fw-bolder">Add Class</h5>
                                   <i class="bi bi-universal-access bg-white text-dark rounded-circle px-1 py-1"></i>
-                                  <a href="#" class="btn border ms-2 border-light rounded-pill text-white">Click Me</a>
+                                  <a href="<?php echo BASE_URL?>/addClass.php" class="btn ms-2 border border-light rounded-pill text-white">Click Me</a>
                                 </div>
                             </div>
                         </div>

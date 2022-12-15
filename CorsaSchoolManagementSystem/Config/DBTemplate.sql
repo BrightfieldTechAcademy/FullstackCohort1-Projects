@@ -94,6 +94,14 @@ CREATE TABLE StudentsAcademicInfo(
 );
 
 
+CREATE TABLE class(
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+    subjects  varchar(255) NOT NULL,
+    classTeacher varchar(255) NOT NULL,
+    numberOfStudents int NOT NULL,
+    PRIMARY KEY (id)
+);
 
 
 
