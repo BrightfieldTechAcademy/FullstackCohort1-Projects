@@ -173,7 +173,8 @@ class Admin extends User
         return $this->db->execute();
     }
 
-    public function addStudentRecords(TermRecords $termRecords) {
+    public function addStudentRecords(TermRecords $termRecords) 
+    {
         $sql = "INSERT INTO StudentsAcademicInfo(
             studentId,
             subjects,
@@ -208,5 +209,28 @@ class Admin extends User
          $this->db->bind(":aggregate", $termRecords->aggregate);
 
          return $this->db->execute();
-      }
+    }
+
+    public function addClass(array $data) 
+    {
+        $sql = "INSERT INTO Classes(
+            name,
+            subjects,
+            classTeacher,
+            numberOfStudents
+         ) VALUES(
+            :name,
+            :subjects,
+            :classTeacher,
+            :numberOfStudents
+        );";
+    
+        $this->db->query($sql);
+        $this->db->bind(":name", $data['className']);
+        $this->db->bind(":subjects", $data['subjects']);
+        $this->db->bind(":classTeacher", $data['classTeacher']);
+        $this->db->bind(":numberOfStudents", $data['numberOfStudents']);
+
+        return $this->db->execute();
+    }
 };
