@@ -39,4 +39,11 @@ class User{
 
         return $this->db->resultSet();
     }
+
+    public function getClasses()
+    {
+        $this->db->query("SELECT * from class");
+        
+        return $this->db->resultSet();
+    }
 }

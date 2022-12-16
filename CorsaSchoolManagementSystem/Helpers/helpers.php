@@ -1,6 +1,7 @@
 <?php 
 
-function generateUuid($lenght = 13) {
+function generateUuid($lenght = 13) 
+{
     // uniqid gives 13 chars, but you could adjust it to your needs.
     if (function_exists("random_bytes")) {
         $bytes = random_bytes(ceil($lenght / 2));
@@ -10,4 +11,13 @@ function generateUuid($lenght = 13) {
         throw new Exception("no cryptographically secure random function available");
     }
     return substr(bin2hex($bytes), 0, $lenght);
+}
+
+function htmlspecialArray(&$variable) 
+{
+    foreach ($variable as &$value) {
+        if (!is_array($value)) { $value = htmlspecialchars($value);  }
+        else { htmlspecialArray($value); }
+    }
+    return $variable;
 }

@@ -36,7 +36,7 @@
         </tr>
         <tr>
             <div class="d-flex flex-column container mt-4">
-                <input type="text" class="form-control" id="fname" name="teachersName" placeholder="Class Teacher's Name">
+                <input type="text" class="form-control" name="teachersName" placeholder="Class Teacher's Name">
             </div>
         </tr>
         <tr>
