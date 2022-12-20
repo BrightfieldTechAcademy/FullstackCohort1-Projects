@@ -197,7 +197,7 @@
                     </table> 
                 </div>  
 
-                <div class="container mt-5 statistics fs-3">
+                <!-- <div class="container mt-5 statistics fs-3">
                     <div class="row">
                         <div class="col">
                             <div class="card">
@@ -220,7 +220,32 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
+                <!-- Class view -->
+                <div class="container search mt-5">
+                    <table id="example1" class="table table-striped table-bordered nowrap" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Class Name</th>
+                                <th>Subjects</th>
+                                <th>Class Teacher</th>
+                                <th>Number Of Students</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach($addClass as $classData): ?>
+                               <tr>
+                               <td><?php echo $classData->name ?></td>
+                                <td><?php echo $classData->subjects ?></td>
+                                <td><?php echo $classData->classTeacher ?></td>
+                                <td><?php echo $classData->numberOfStudents ?></td>
+                               </tr>
+                            <?php endforeach;?>
+                        </tbody>
+                    </table> 
+                </div>  
+
 
                 <footer>
                     <div class="container">
@@ -268,6 +293,16 @@
                  new $.fn.dataTable.FixedHeader( table );
              });        
          </script>
+
+        <script>
+             $(document).ready(function() {
+                 var table = $('#example1').DataTable( {
+                     responsive: true
+                 } );
+             
+                 new $.fn.dataTable.FixedHeader( table );
+             });        
+        </script>
         <script>
             window.addEventListener('DOMContentLoaded', event => {
 

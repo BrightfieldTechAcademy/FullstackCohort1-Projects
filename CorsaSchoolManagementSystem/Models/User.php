@@ -42,7 +42,7 @@ class User{
 
     public function getClasses()
     {
-        $this->db->query("SELECT * from class");
+        $this->db->query("SELECT * from Classes");
         
         return $this->db->resultSet();
     }
