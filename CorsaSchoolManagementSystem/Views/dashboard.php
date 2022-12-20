@@ -234,10 +234,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach($addClass as $classData): ?>
+                            <?php foreach($classes as $classData): ?>
                                <tr>
                                <td><?php echo $classData->name ?></td>
-                                <td><?php echo $classData->subjects ?></td>
+                                <td><?php echo implode(',', unserialize($classData->subjects)) ?></td>
                                 <td><?php echo $classData->classTeacher ?></td>
                                 <td><?php echo $classData->numberOfStudents ?></td>
                                </tr>
