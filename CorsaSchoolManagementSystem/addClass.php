@@ -2,9 +2,10 @@
 
 require('Core/init.php');
 if($_SESSION['loggedIn'] && $_SESSION['role'] === Roles::ADMIN){
+    //$users = new User(new Database);
+
     if(isset($_POST['addClass'])){
         $admin = new Admin(new Database);
-
         $data = [];
         $data['className'] = htmlspecialchars($_POST['className']);
         $data['classTeacher'] = htmlspecialchars($_POST['teachersName']);
@@ -14,6 +15,8 @@ if($_SESSION['loggedIn'] && $_SESSION['role'] === Roles::ADMIN){
         $admin->addClass($data);
     }
     $template = new Template("Views/addClass.php");
+    //$data = $users->getClasses();
+    //var_dump($data);
     echo $template;
 
 }else{
