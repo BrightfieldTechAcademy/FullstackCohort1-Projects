@@ -108,7 +108,7 @@ ALTER TABLE StudentsInfo
 CHANGE previousClass previousClassId int,
 CHANGE classAdmitted classAdmittedId int;
 
-ALTER TABLE table_name
+ALTER TABLE StudentsInfo
 ADD currentClassId int NOT NULL;
 
 ALTER TABLE StudentsInfo

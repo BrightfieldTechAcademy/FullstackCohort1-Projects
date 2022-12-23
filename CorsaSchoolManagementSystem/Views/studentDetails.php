@@ -240,7 +240,15 @@
                     <th>Grade</th>
                   </tr>
                 </thead>
-
+                 <tbody>
+                    <?php foreach ($classes as $classSubjects): ?>
+                      <tr>
+                        <td>
+                          <?php echo implode(',', unserialize($classSubjects->subjects)) ?>
+                        </td>
+                      </tr>
+                    <?php endforeach; ?>
+                 </tbody>
               </table>
             </div>
           </div>

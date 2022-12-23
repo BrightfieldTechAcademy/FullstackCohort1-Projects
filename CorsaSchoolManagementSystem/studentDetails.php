@@ -6,6 +6,8 @@ if($_SESSION['loggedIn']){
     $users = new User(new Database());
     $template = new Template("Views/studentDetails.php");
     $studentDetails = $users->getStudentDetails(htmlspecialchars($_GET['studentId']));
+    $template->classes = $users->getClasses();
+
     $template->studentDetails = $studentDetails;
     $studentFees = $users->getStudentFees($studentDetails->studentId);
     for($index = 0; $index < count($studentFees); $index++){
