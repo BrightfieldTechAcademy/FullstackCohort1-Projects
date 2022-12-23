@@ -67,7 +67,9 @@ if($_SESSION['loggedIn'] && $_SESSION['role'] === Roles::ADMIN){
         $studentParentData->guardiansContact = htmlspecialchars($_POST['guardiansContact']);
         $admin->addStudentParentData($studentParentData);
     }
+    $users = new User(new Database());
     $template = new Template("Views/addStudent.php");
+    $template->classes = $users->getClasses();
     echo $template;
 
 }else{

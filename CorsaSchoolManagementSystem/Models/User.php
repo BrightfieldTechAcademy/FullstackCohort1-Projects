@@ -20,14 +20,14 @@ class User{
 
     public function getStudentsDetails()
     {
-        $this->db->query("SELECT StudentsInfo.*, StudentHealthsInfo.*, ParentsInfo.* from StudentsInfo INNER JOIN StudentHealthsInfo ON StudentsInfo.id = StudentHealthsInfo.studentId INNER JOIN ParentsInfo  ON StudentsInfo.id = ParentsInfo.studentId ;");
+        $this->db->query("SELECT StudentsInfo.*, StudentHealthsInfo.*, ParentsInfo.*, Classes.id AS classId, Classes.name AS className, Classes.subjects, Classes.classTeacher from StudentsInfo INNER JOIN StudentHealthsInfo ON StudentsInfo.id = StudentHealthsInfo.studentId INNER JOIN ParentsInfo ON StudentsInfo.id = ParentsInfo.studentId INNER JOIN Classes ON StudentsInfo.currentClassId = Classes.id;");
         
         return $this->db->resultSet();
     }
 
     public function getStudentDetails(string $id)
     {
-        $this->db->query("SELECT StudentsInfo.*, StudentHealthsInfo.*, ParentsInfo.* from StudentsInfo INNER JOIN StudentHealthsInfo ON StudentsInfo.id = StudentHealthsInfo.studentId INNER JOIN ParentsInfo  ON StudentsInfo.id = ParentsInfo.studentId  WHERE StudentsInfo.uuid = :uuid;");
+        $this->db->query("SELECT StudentsInfo.*, StudentHealthsInfo.*, ParentsInfo.*, Classes.id AS classId, Classes.name AS className, Classes.subjects, Classes.classTeacher from StudentsInfo INNER JOIN StudentHealthsInfo ON StudentsInfo.id = StudentHealthsInfo.studentId INNER JOIN ParentsInfo ON StudentsInfo.id = ParentsInfo.studentId INNER JOIN Classes ON StudentsInfo.currentClassId = Classes.id WHERE StudentsInfo.uuid = :uuid;");
         $this->db->bind(":uuid", $id);
         return $this->db->single();
     }

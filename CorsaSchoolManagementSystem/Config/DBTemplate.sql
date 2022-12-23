@@ -28,7 +28,6 @@ CREATE TABLE StudentsInfo (
     formerSchool VARCHAR(255),
     previousClass VARCHAR(255) ,
     classAdmitted  VARCHAR(255) NOT NULL,
-    currentClass VARCHAR(255) NOT NULL,
     yearOfAdmission  VARCHAR(255) NOT NULL,
     picture VARCHAR(255) NOT NULL
 );
@@ -105,5 +104,24 @@ CREATE TABLE Classes(
 );
 
 
+ALTER TABLE StudentsInfo 
+CHANGE previousClass previousClassId int,
+CHANGE classAdmitted classAdmittedId int;
 
+ALTER TABLE table_name
+ADD currentClassId int NOT NULL;
 
+ALTER TABLE StudentsInfo
+ADD CONSTRAINT
+        FOREIGN KEY (previousClassId)
+        REFERENCES Classes(id);
+
+ALTER TABLE StudentsInfo
+ADD CONSTRAINT
+        FOREIGN KEY (classAdmittedId)
+        REFERENCES Classes(id);
+
+ALTER TABLE StudentsInfo
+ADD CONSTRAINT
+        FOREIGN KEY (currentClassId)
+        REFERENCES Classes(id);

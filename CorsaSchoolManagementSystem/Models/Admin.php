@@ -20,8 +20,9 @@ class Admin extends User
             gender,
             religion,
             formerSchool,
-            previousClass,
-            classAdmitted,
+            previousClassId,
+            classAdmittedId,
+            currentClassId,
             yearOfAdmission, 
             picture
         ) VALUES(
@@ -39,6 +40,7 @@ class Admin extends User
             :formerSchool,
             :previousClass,
             :classAdmitted,
+            :currentClass,
             :yearOfAdmission, 
             :picture
         );";
@@ -57,6 +59,7 @@ class Admin extends User
         $this->db->bind(":formerSchool", $student->formerSchool);
         $this->db->bind(":previousClass",$student->previousClass);
         $this->db->bind(":classAdmitted",$student->classAdmitted);
+        $this->db->bind(":currentClass",$student->classAdmitted);
         $this->db->bind(":yearOfAdmission",$student->yearOfAdmission);
         $this->db->bind(":picture",$student->picture);
         $this->db->execute(); 

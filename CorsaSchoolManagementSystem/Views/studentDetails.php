@@ -86,7 +86,7 @@
               <p><strong>Hometown: </strong> <?php echo $studentDetails->hometown?> </p>
               <p><strong>Residential Address: </strong> <?php echo $studentDetails->residentialAddress?> </p>
               <p><strong>GPS Address: </strong> <?php echo $studentDetails->gpsAddress?> </p>
-              <p><strong>Class Admitted: </strong> <?php echo $studentDetails->classAdmitted?> </p>
+              <p><strong>Current Class : </strong> <?php echo $studentDetails->className?> </p>
               <p><strong>Year of Admission: </strong> <?php echo $studentDetails->yearOfAdmission?> </p>
             </div>
             <!-- Grid column -->

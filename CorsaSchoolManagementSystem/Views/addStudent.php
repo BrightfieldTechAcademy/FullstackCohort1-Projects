@@ -112,12 +112,22 @@
 
                     <div class="d-flex flex-column container mt-4">
                         <label for="GPS" class="my-2">Previous Class</label>
-                        <input type="text" class="form-control" name="previousClass">
+                        <select class="form-select" aria-label="Default select previousClass" name="previousClass">
+                          <option selected>Open this select menu</option>
+                          <?php foreach($classes as $class): ?>
+                            <option value="<?php echo $class->id ?>"><?php echo $class->name ?></option>
+                          <?php endforeach;  ?>
+                      </select>
                     </div>
 
                     <div class="d-flex flex-column container mt-4">
                         <label for="GPS" class="my-2">Class Admitted</label>
-                        <input type="text" class="form-control" name="classAdmitted">
+                        <select class="form-select" aria-label="Default select classAdmitted" name="classAdmitted">
+                          <option selected>Open this select menu</option>
+                          <?php foreach($classes as $class): ?>
+                            <option value="<?php echo $class->id ?>"><?php echo $class->name ?></option>
+                          <?php endforeach;  ?>
+                      </select>
                     </div>
 
                     <div class="d-flex flex-column container mt-4">
