@@ -243,7 +243,10 @@
                  <tbody>
                   <tr>
                     <td>
-                      <?php echo implode(',', unserialize($studentDetails->subjects)) ?>
+                      <?php 
+                        echo implode('<br>', unserialize($studentDetails->subjects ))
+                      ?>
+
                     </td>
                   </tr>
                  </tbody>
