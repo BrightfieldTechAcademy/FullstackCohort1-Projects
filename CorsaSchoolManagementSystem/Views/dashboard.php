@@ -224,6 +224,8 @@
 
                 <!-- Class view -->
                 <div class="container search mt-5">
+
+                
                     <table id="example1" class="table table-striped table-bordered nowrap" style="width:100%">
                         <thead>
                             <tr>
