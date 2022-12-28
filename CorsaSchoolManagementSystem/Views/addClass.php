@@ -30,24 +30,32 @@
   <form action="<?php echo BASE_URL ?>/addClass.php" method="post" class="py-2 px-3 rounded container my-5" style="box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.14);">
     <table class="table" id='addClass'>
         <tr>
-            <div class="d-flex flex-column container mt-4">
-                <input type="text" class="form-control" id="className" name="className" required placeholder="Class Name">
-            </div>
+            <td>
+                <div class="d-flex flex-column container mt-4">
+                    <input type="text" class="form-control" id="className" name="className" required placeholder="Class Name">
+                </div>
+            </td>
         </tr>
         <tr>
-            <div class="d-flex flex-column container mt-4">
-                <input type="text" class="form-control" name="teachersName" placeholder="Class Teacher's Name">
-            </div>
+            <td>
+                <div class="d-flex flex-column container mt-4">
+                    <input type="text" class="form-control" name="teachersName" placeholder="Class Teacher's Name">
+                </div>
+            </td>
         </tr>
         <tr>
-            <div class="d-flex flex-column container mt-4">
-                <input type="number" class="form-control"  name="numberOfStudents" required placeholder="Total Number of Students:">
-            </div>
+            <td>
+                <div class="d-flex flex-column container mt-4">
+                    <input type="number" class="form-control"  name="numberOfStudents" required placeholder="Total Number of Students:">
+                </div>
+            </td>
         </tr>
         <tr id="subjectsRow1">
-            <div class="d-flex flex-column container mt-4">
-                <input type="text" class="form-control" name="subjects[]" required placeholder="Subject Name">
-            </div>
+            <td>
+                <div class="d-flex flex-column container mt-4">
+                    <input type="text" class="form-control" name="subjects[]" required placeholder="Subject Name">
+                </div>
+            </td>
         </tr>
     </table>
     <div class="container">
